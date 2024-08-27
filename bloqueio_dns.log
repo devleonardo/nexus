@@ -1,0 +1,1067 @@
+
+PLAY [Atualização do anablock.conf] ********************************************
+
+TASK [RDNS-GRL-02] *************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/grl-02.yml"], "delta": "0:00:01.343816", "end": "2024-07-31 11:12:32.573174", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:31.229358", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/grl-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/grl-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-GRL-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/grl-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/grl-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-GRL-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [SJI-01] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/sji-01.yml"], "delta": "0:00:01.089579", "end": "2024-07-31 11:12:34.089622", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:33.000043", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/sji-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do SJI-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/sji-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do SJI-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [SJI-02] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/sji-02.yml"], "delta": "0:00:01.186659", "end": "2024-07-31 11:12:35.726081", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:34.539422", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/sji-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do SJI-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/sji-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do SJI-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [ITB-02] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/itb-02.yml"], "delta": "0:00:01.333044", "end": "2024-07-31 11:12:37.430218", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:36.097174", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/itb-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/itb-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do ITB-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/itb-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/itb-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do ITB-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [MRC-01] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/mrc-01.yml"], "delta": "0:00:01.453257", "end": "2024-07-31 11:12:39.316636", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:37.863379", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/mrc-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do MRC-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/mrc-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do MRC-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [MRC-02] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/mrc-02.yml"], "delta": "0:00:01.301270", "end": "2024-07-31 11:12:41.094327", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:39.793057", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/mrc-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do MRC-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/mrc-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do MRC-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [NIT-01] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/nit-01.yml"], "delta": "0:00:01.289540", "end": "2024-07-31 11:12:42.801263", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:41.511723", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/nit-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/nit-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do NIT-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/nit-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/nit-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do NIT-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-01] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-01.yml"], "delta": "0:00:01.298896", "end": "2024-07-31 11:12:44.533019", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:43.234123", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-02] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-02.yml"], "delta": "0:00:01.300341", "end": "2024-07-31 11:12:46.203595", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:44.903254", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-03] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-03.yml"], "delta": "0:00:01.281646", "end": "2024-07-31 11:12:47.922032", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:46.640386", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-03.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-03.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-03\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-03.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-03.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-03", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-04] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-04.yml"], "delta": "0:00:01.491408", "end": "2024-07-31 11:12:49.829361", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:48.337953", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-04.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-04.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-04\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-04.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-04.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-04", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-05] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-05.yml"], "delta": "0:00:01.588259", "end": "2024-07-31 11:12:51.940505", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:50.352246", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-05.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-05.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-05\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-05.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-05.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-05", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-06] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-06.yml"], "delta": "0:00:01.564385", "end": "2024-07-31 11:12:53.934210", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:12:52.369825", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-06.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-06.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-06\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-06.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-06.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-06", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=13   changed=13   unreachable=0    failed=0    skipped=0    rescued=0    ignored=13  
+
+Erro ao executar atualização do Anablock
+PLAY [Atualização do anablock.conf] ********************************************
+
+TASK [RDNS-GRL-02] *************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/grl-02.yml"], "delta": "0:00:01.078924", "end": "2024-07-31 11:14:23.263902", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:22.184978", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/grl-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/grl-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-GRL-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/grl-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/grl-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-GRL-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [SJI-01] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/sji-01.yml"], "delta": "0:00:01.265241", "end": "2024-07-31 11:14:24.961534", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:23.696293", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/sji-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do SJI-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/sji-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do SJI-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [SJI-02] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/sji-02.yml"], "delta": "0:00:01.130001", "end": "2024-07-31 11:14:26.448155", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:25.318154", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/sji-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do SJI-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/sji-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/sji-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do SJI-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [ITB-02] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/itb-02.yml"], "delta": "0:00:01.287065", "end": "2024-07-31 11:14:28.122626", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:26.835561", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/itb-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/itb-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do ITB-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/itb-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/itb-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do ITB-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [MRC-01] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/mrc-01.yml"], "delta": "0:00:01.185535", "end": "2024-07-31 11:14:29.740131", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:28.554596", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/mrc-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do MRC-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/mrc-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do MRC-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [MRC-02] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/mrc-02.yml"], "delta": "0:00:01.215619", "end": "2024-07-31 11:14:31.308728", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:30.093109", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/mrc-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do MRC-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/mrc-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/mrc-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do MRC-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [NIT-01] ******************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/nit-01.yml"], "delta": "0:00:01.127422", "end": "2024-07-31 11:14:32.812942", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:31.685520", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/nit-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/nit-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do NIT-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/nit-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/nit-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do NIT-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-01] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-01.yml"], "delta": "0:00:01.102672", "end": "2024-07-31 11:14:34.264228", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:33.161556", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-01.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-01.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-01\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-01.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-01.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-01", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-02] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-02.yml"], "delta": "0:00:01.257770", "end": "2024-07-31 11:14:35.954362", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:34.696592", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-02.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-02.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-02\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-02.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-02.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-02", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-03] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-03.yml"], "delta": "0:00:01.341446", "end": "2024-07-31 11:14:37.754060", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:36.412614", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-03.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-03.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-03\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-03.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-03.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-03", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-04] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-04.yml"], "delta": "0:00:01.031899", "end": "2024-07-31 11:14:39.128899", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:38.097000", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-04.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-04.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-04\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-04.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-04.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-04", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-05] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-05.yml"], "delta": "0:00:01.500185", "end": "2024-07-31 11:14:41.004453", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:39.504268", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-05.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-05.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-05\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-05.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-05.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-05", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+TASK [RDNS-06] *****************************************************************
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["sudo", "ansible-playbook", "-i", "/home/usshd/Ansible/anablock/inventory.yml", "/home/usshd/Ansible/anablock/rdns-06.yml"], "delta": "0:00:01.047013", "end": "2024-07-31 11:14:42.436189", "msg": "non-zero return code", "rc": 4, "start": "2024-07-31 11:14:41.389176", "stderr": "ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-06.yml\n\nThe error appears to be in '/home/usshd/Ansible/anablock/rdns-06.yml': line 3, column 1, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\nname: Atualizar anablock do RDNS-06\n^ here", "stderr_lines": ["ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/usshd/Ansible/anablock/rdns-06.yml", "", "The error appears to be in '/home/usshd/Ansible/anablock/rdns-06.yml': line 3, column 1, but may", "be elsewhere in the file depending on the exact syntax problem.", "", "The offending line appears to be:", "", "", "name: Atualizar anablock do RDNS-06", "^ here"], "stdout": "", "stdout_lines": []}
+...ignoring
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=13   changed=13   unreachable=0    failed=0    skipped=0    rescued=0    ignored=13  
+
+Erro ao executar atualização do Anablock31/07/2024 - Teste 31072024
+PLAY [Criar backup da última configuração válida SJI-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.93]
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no SJI-02] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.93]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.93]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.93]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [200.202.111.93]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:01.570679", "end": "2024-07-31 11:16:13.097228", "msg": "non-zero return code", "rc": 1, "start": "2024-07-31 11:16:11.526549", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no SJI-0231/07/2024 - Teste 31072024
+PLAY [Criar backup da última configuração válida SJI-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.93]
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no SJI-02] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.93]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.93]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.93]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [200.202.111.93]
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida RDNS-GRL-02] ******************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no RDNS-GRL-02] **************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida SJI-01] ***********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no SJI-01] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida SJI-02] ***********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no SJI-02] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+Erro ao executar bloqueio no MRC-01
+PLAY [Criar backup da última configuração válida MRC-02] ***********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no MRC02] ********************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida RDNS-01] **********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no RDNS01] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida RDNS-02] **********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no RDNS02] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida RDNS-03] **********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no RDNS03] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida RDNS-04] **********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no RDNS04] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida RDNS-05] **********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no RDNS05] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Criar backup da última configuração válida RDNS-06] **********************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+
+PLAY [Bloqueio de dominio no RDNS06] *******************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida RDNS-GRL-02] ******************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+fatal: [186.211.32.186]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ansible@186.211.32.186: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password,keyboard-interactive).", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+186.211.32.186             : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no RDNS-GRL-02
+PLAY [Criar backup da última configuração válida SJI-01] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.93]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.93]
+
+PLAY RECAP *********************************************************************
+186.211.32.93              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no SJI-01] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.93]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.93]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.93]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.93]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [186.211.32.93]
+
+PLAY RECAP *********************************************************************
+186.211.32.93              : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no SJI-02Erro ao executar bloqueio no MRC-01Erro ao executar bloqueio no MRC-02Erro ao executar bloqueio no RDNS-01
+PLAY [Criar backup da última configuração válida RDNS-02] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.98]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.98]
+
+PLAY RECAP *********************************************************************
+186.211.32.98              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS02] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.98]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.98]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.98]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.98]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [186.211.32.98]
+
+PLAY RECAP *********************************************************************
+186.211.32.98              : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Criar backup da última configuração válida RDNS-03] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.59]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.59]
+
+PLAY RECAP *********************************************************************
+186.211.32.59              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS03] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.59]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.59]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.59]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.59]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [186.211.32.59]
+
+PLAY RECAP *********************************************************************
+186.211.32.59              : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Criar backup da última configuração válida RDNS-04] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.56]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.56]
+
+PLAY RECAP *********************************************************************
+186.211.32.56              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS04] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.56]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.56]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.56]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.56]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [186.211.32.56]
+
+PLAY RECAP *********************************************************************
+186.211.32.56              : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Criar backup da última configuração válida RDNS-05] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.58]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.58]
+
+PLAY RECAP *********************************************************************
+200.202.111.58             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS05] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.58]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.58]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.58]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.58]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [200.202.111.58]
+
+PLAY RECAP *********************************************************************
+200.202.111.58             : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Criar backup da última configuração válida RDNS-06] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.98]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.98]
+
+PLAY RECAP *********************************************************************
+200.202.111.98             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS06] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.98]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.98]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.98]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.98]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [200.202.111.98]
+
+PLAY RECAP *********************************************************************
+200.202.111.98             : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida RDNS-GRL-02] ******************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.186]
+
+PLAY RECAP *********************************************************************
+186.211.32.186             : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS-GRL-02] **************************************
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.186]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.186]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.186]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [186.211.32.186]
+
+TASK [Atualizando anablock.conf do Nexus] **************************************
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida RDNS-GRL-02] ******************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.186]
+
+PLAY RECAP *********************************************************************
+186.211.32.186             : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS-GRL-02] **************************************
+
+TASK [Atualizando anablock.conf do Nexus] **************************************
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida RDNS-GRL-02] ******************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.186]
+
+PLAY RECAP *********************************************************************
+186.211.32.186             : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS-GRL-02] **************************************
+
+TASK [Atualizando anablock.conf do Nexus] **************************************
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.Erro ao executar bloqueio no RDNS-GRL-0221/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Atualizando o arquivo anablock.conf no Nexus] ****************************
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.Erro ao executar bloqueio no SJI-0221/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.Erro ao executar bloqueio no SJI-0221/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.Erro ao executar bloqueio no SJI-0221/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida SJI-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.93]
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no SJI-02] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.93]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.93]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.93]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [200.202.111.93]
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+21/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.Erro ao executar bloqueio no MRC-0121/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida MRC-01] ***********************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+fatal: [186.211.32.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:bTrUjmqDtAOzPQKruqrxrgtvqpUi2H0BsynbaavDEXw.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:20\r\nHost key for 186.211.32.11 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+186.211.32.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no MRC-0121/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida MRC-01] ***********************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+fatal: [186.211.32.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:bTrUjmqDtAOzPQKruqrxrgtvqpUi2H0BsynbaavDEXw.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:20\r\nHost key for 186.211.32.11 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+186.211.32.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no MRC-0121/08/2024 - Fwd: Ofício nº 078/2024-Del, de 12 de agosto de 2024. Bloqueio dinâmico - operação 404. Cumprimento de decisão judicial.
+PLAY [Criar backup da última configuração válida MRC-01] ***********************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+fatal: [186.211.32.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:bTrUjmqDtAOzPQKruqrxrgtvqpUi2H0BsynbaavDEXw.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:20\r\nHost key for 186.211.32.11 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+186.211.32.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no MRC-0121/08/2024 - Fwd: Ofícios nº 13913400, de 12 de agosto de 2024, e nº 13947346, de 15 de agosto de 2024, do CyberGaeco. Ministério Público do Estado de São Paulo (MPSP). Decisão judicial e lista atualizada dos domínios para bloqueio de acesso.
+PLAY [Criar backup da última configuração válida RDNS-GRL-02] ******************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.186]
+
+PLAY RECAP *********************************************************************
+186.211.32.186             : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS-GRL-02] **************************************
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.186]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.186]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.186]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [186.211.32.186]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:13.660031", "end": "2024-08-21 23:36:29.825284", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:36:16.165253", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+TASK [Rollback RDNS-GRL-02] ****************************************************
+changed: [186.211.32.186]
+
+TASK [Falha na execução do bloqueio] *******************************************
+fatal: [186.211.32.186]: FAILED! => {"changed": false, "msg": "Rollback realizado"}
+
+PLAY RECAP *********************************************************************
+186.211.32.186             : ok=4    changed=4    unreachable=0    failed=1    skipped=0    rescued=1    ignored=0   
+
+Erro ao executar bloqueio no RDNS-GRL-02
+PLAY [Criar backup da última configuração válida SJI-01] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.93]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.93]
+
+PLAY RECAP *********************************************************************
+186.211.32.93              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no SJI-01] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.93]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.93]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.93]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.93]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [186.211.32.93]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:04.803508", "end": "2024-08-21 23:36:50.299282", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:36:45.495774", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+186.211.32.93              : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no SJI-01
+PLAY [Criar backup da última configuração válida SJI-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.93]
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no SJI-02] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.93]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.93]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.93]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.93]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [200.202.111.93]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:01.520339", "end": "2024-08-21 23:37:06.276654", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:37:04.756315", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+200.202.111.93             : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no SJI-02
+PLAY [Criar backup da última configuração válida MRC-01] ***********************
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+fatal: [186.211.32.11]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\n@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @\r\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\r\nIT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!\r\nSomeone could be eavesdropping on you right now (man-in-the-middle attack)!\r\nIt is also possible that a host key has just been changed.\r\nThe fingerprint for the ECDSA key sent by the remote host is\nSHA256:bTrUjmqDtAOzPQKruqrxrgtvqpUi2H0BsynbaavDEXw.\r\nPlease contact your system administrator.\r\nAdd correct host key in /root/.ssh/known_hosts to get rid of this message.\r\nOffending ECDSA key in /root/.ssh/known_hosts:20\r\nHost key for 186.211.32.11 has changed and you have requested strict checking.\r\nHost key verification failed.", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+186.211.32.11              : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no MRC-01
+PLAY [Criar backup da última configuração válida MRC-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.11]
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no MRC02] ********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.11]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.11]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.11]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [200.202.111.11]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:01.805371", "end": "2024-08-21 23:37:25.847846", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:37:24.042475", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no MRC-02
+PLAY [Criar backup da última configuração válida RDNS-01] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.58]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.58]
+
+PLAY RECAP *********************************************************************
+186.211.32.58              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS01] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.58]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.58]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.58]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.58]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [186.211.32.58]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:07.367005", "end": "2024-08-21 23:37:48.351339", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:37:40.984334", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+186.211.32.58              : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no RDNS-01
+PLAY [Criar backup da última configuração válida RDNS-02] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.98]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.98]
+
+PLAY RECAP *********************************************************************
+186.211.32.98              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS02] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.98]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.98]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.98]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.98]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [186.211.32.98]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:04.596158", "end": "2024-08-21 23:38:07.735626", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:38:03.139468", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+186.211.32.98              : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no RDNS-02
+PLAY [Criar backup da última configuração válida RDNS-03] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.59]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.59]
+
+PLAY RECAP *********************************************************************
+186.211.32.59              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS03] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.59]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.59]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.59]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.59]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [186.211.32.59]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:05.657098", "end": "2024-08-21 23:38:26.726095", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:38:21.068997", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+186.211.32.59              : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no RDNS-03
+PLAY [Criar backup da última configuração válida RDNS-04] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.56]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [186.211.32.56]
+
+PLAY RECAP *********************************************************************
+186.211.32.56              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS04] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [186.211.32.56]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [186.211.32.56]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [186.211.32.56]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [186.211.32.56]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [186.211.32.56]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:02.705749", "end": "2024-08-21 23:38:43.807533", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:38:41.101784", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+186.211.32.56              : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no RDNS-04
+PLAY [Criar backup da última configuração válida RDNS-05] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.58]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.58]
+
+PLAY RECAP *********************************************************************
+200.202.111.58             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS05] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.58]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.58]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.58]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.58]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [200.202.111.58]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:08.157598", "end": "2024-08-21 23:39:05.358788", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:38:57.201190", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+200.202.111.58             : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no RDNS-05
+PLAY [Criar backup da última configuração válida RDNS-06] **********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.98]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.98]
+
+PLAY RECAP *********************************************************************
+200.202.111.98             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no RDNS06] *******************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.98]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.98]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.98]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.98]
+
+TASK [Reiniciando o Unbound] ***************************************************
+fatal: [200.202.111.98]: FAILED! => {"changed": true, "cmd": ["sudo", "systemctl", "restart", "unbound"], "delta": "0:00:04.990796", "end": "2024-08-21 23:39:24.717024", "msg": "non-zero return code", "rc": 1, "start": "2024-08-21 23:39:19.726228", "stderr": "Job for unbound.service failed because the control process exited with error code.\nSee \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details.", "stderr_lines": ["Job for unbound.service failed because the control process exited with error code.", "See \"systemctl status unbound.service\" and \"journalctl -xeu unbound.service\" for details."], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+200.202.111.98             : ok=4    changed=3    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+Erro ao executar bloqueio no RDNS-0622/08/2024 - teste
+PLAY [Criar backup da última configuração válida MRC-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.11]
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no MRC02] ********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.11]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.11]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.11]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [200.202.111.11]
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+22/08/2024 - Fwd: Ofícios nº 13913400, de 12 de agosto de 2024, e nº 13947346, de 15 de agosto de 2024, do CyberGaeco. Ministério Público do Estado de São Paulo (MPSP). Decisão judicial e lista atualizada dos domínios para bloqueio de acesso.
+PLAY [Criar backup da última configuração válida MRC-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.11]
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no MRC02] ********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.11]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.11]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.11]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [200.202.111.11]
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+22/08/2024 - Fwd: Ofícios nº 13913400, de 12 de agosto de 2024, e nº 13947346, de 15 de agosto de 2024, do CyberGaeco. Ministério Público do Estado de São Paulo (MPSP). Decisão judicial e lista atualizada dos domínios para bloqueio de acesso.
+PLAY [Criar backup da última configuração válida MRC-02] ***********************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Criando backup do arquivo sitesbloqueados.conf] **************************
+changed: [200.202.111.11]
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+
+PLAY [Bloqueio de dominio no MRC02] ********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [200.202.111.11]
+
+TASK [Copiando linhas para o host remoto] **************************************
+changed: [200.202.111.11]
+
+TASK [Adicionando linhas no arquivo include] ***********************************
+changed: [200.202.111.11]
+
+TASK [Apagando o arquivo linhas] ***********************************************
+changed: [200.202.111.11]
+
+TASK [Reiniciando o Unbound] ***************************************************
+changed: [200.202.111.11]
+
+PLAY RECAP *********************************************************************
+200.202.111.11             : ok=5    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

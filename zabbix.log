@@ -1,0 +1,22 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on https://127.0.0.1:443
+ * Running on https://10.1.254.60:443
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:sistemasti:O usuário: leonardo_martins, realizou uma busca por MAC-Address.
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "POST /busca_mac HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "GET /static/css/output.css HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "GET /static/img/loading.gif HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "GET /static/img/Leste_Negativa.svg HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "GET /static/js/buscarMac.js HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "GET /static/js/loader.js HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:32] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+INFO:sistemasti:O usuário: leonardo_martins, realizou uma busca por MAC-Address.
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:35] "POST /busca_mac HTTP/1.1" 200 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:35] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:35] "[36mGET /static/img/loading.gif HTTP/1.1[0m" 304 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:35] "[36mGET /static/img/Leste_Negativa.svg HTTP/1.1[0m" 304 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:35] "[36mGET /static/js/buscarMac.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:186.211.32.254 - - [26/Jul/2024 09:05:35] "[36mGET /static/js/loader.js HTTP/1.1[0m" 304 -
