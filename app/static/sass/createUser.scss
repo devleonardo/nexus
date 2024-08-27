@@ -1,0 +1,76 @@
+#info {
+    #copy_user{
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
+        .nome{
+            grid-column:1/3;
+        }
+        .sobrenome{
+            grid-column:3/6;
+        }
+        .iniciais{
+            grid-column:6/8;
+        }
+        .descricao{
+            grid-column:8/10;
+        }
+        .email{
+            grid-column:1/5;
+        }
+        .cpf{
+            grid-column:5/7;
+        }
+        .username{
+            grid-column:7/10;
+        }
+        .grupos{
+            grid-column:1/10;
+        }
+        .copia{
+            grid-column:1/2;
+        }
+        .searchResult{
+            grid-column:1/3;
+        }
+        table {
+            margin: 0;
+            .buscados{
+                grid-column:1/4;
+                td{
+                    background-color: $bg-button-color;
+                    color: $title-color;
+                    text-align: center;
+                }
+            }
+        }
+
+
+    }
+}
+.copyUser{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    .btn{
+        grid-column: 3/4;
+    }
+    .form-control{
+        grid-column: 1/3;
+    }
+}
+// BOTÕES PARA ALTERAÇÕES DE USUARIOS
+#criar{
+    padding: 5px;
+    width: 100%;
+    height: 45px;
+    margin-right: 5px;
+}
+
+#saveNewUser {
+  padding: 5px;
+  width: 200px;
+  height: 45px;
+  margin-right: 5px;
+}
+

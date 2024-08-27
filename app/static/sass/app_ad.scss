@@ -1,0 +1,61 @@
+/* INICIO DA CONSULTA */
+table {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  background-color: $title-color;
+  width: 100%;
+  border-radius: 0px 0px 5px 5px !important;
+  
+  
+  th[scope='col']{
+    :first-child{
+      border-radius: 5px 0 0 0;
+    }
+    :last-child{
+      border-radius: 0 5px 0 0;
+    }
+  }
+
+  th[scope='col']{
+    background-color: $bg-color;
+    border-bottom: 2px solid $secondary-leste;
+    color: $title-color;
+    padding: 10px;
+  }
+  
+  th[scope='row'] {
+    background-color: $title-color;
+  }
+  
+  .buscados{
+    td,
+    th {
+      padding: 7px 10px;
+    }
+    td {
+      a{
+        font-weight: bold;
+        text-decoration: none;
+        color: $tertiary-color;
+        font-size: 15px;
+      }
+      a:hover{
+        color: $link-hover-color !important;
+      }
+    }
+  }
+  
+  tr:nth-child(even) {
+    background-color: $secondary-row-color;
+  }
+
+  caption {
+    padding: 10px 0;
+    caption-side: bottom;
+    color: $title-color !important;
+  }
+}
+/* FINAL DA CONSULTA */

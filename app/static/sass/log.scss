@@ -1,0 +1,54 @@
+#card {
+    .audit_log{
+        background-color: $bg-color;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        .log{
+            height: 500px;
+            width: 100%;
+            overflow: auto;
+            // ESTILO DO SCROLL
+            /* LARGURA DA BARRA DE ROLAGEM VERTICAL */
+            scrollbar-width: thin; /* OU VALOR EM PIXEL */
+            
+            /* COR DA BARRA DE ROLAGEM */
+            scrollbar-color: $secondary-leste $bg-color; /* COR DA BARRA DE FUNDO */
+
+            // PERSONALIZAÇÃO ESPECIFICA DO WEBKIT (CHROME, SAFARI, ETC)
+            &::-webkit-scrollbar {width: 10px; /* OU VALOR DESEJADO */}
+            
+            &::-webkit-scrollbar-thumb {
+                height: 40px;
+                border-radius: 2px;
+                background-color: $secondary-leste; /* COR DA ALÇA */
+            }
+
+            &::-webkit-scrollbar-track {background-color: $bg-color; /* COR DO FUNDO */}
+            // LISTA DO LOG
+            li{
+                width: 100%;
+                border-radius: 0;
+                background-color: $group-color;
+                color: $title-color;
+                margin: 0;
+            }
+        }
+        .log li:nth-child(even) {
+            background-color: $bg-color;
+        }
+        // INPUT DE PESQUISA DE LOG
+        #search-input{
+            padding: 6px !important;
+            width: 50%;
+            border: none;
+            margin-right: 5px;
+        }
+        // BOTÃO PARA PESQUISAR O LOG
+        #search-button{
+            background-color: $secondary-leste;
+            color: $bg-color;
+            border: none !important;
+        }
+    }
+}

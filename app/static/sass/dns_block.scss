@@ -1,0 +1,39 @@
+.dns-block-b {
+    height: 700px !important;
+    overflow: hidden;
+    .terminal-dns-status {
+        position: absolute;
+        top: 29%;
+        left: 56.75%;
+        max-height: 360px;
+        width: 500px;
+        background-color: black;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: $secondary-leste;
+        font-size: 12px;
+        overflow: auto;
+        overflow-x: scroll;
+        padding: 10px;
+        white-space: nowrap;
+        display: none;
+        scrollbar-width: thin;
+        scrollbar-color: $secondary-leste $bg-color;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            height: 40px;
+            border-radius: 5px;
+            background-color: $secondary-leste; /* COR DA ALÇA */
+        }
+    }
+
+    .iframe-bloqueio {
+        height: 100vh;
+        width: 100%;
+    }
+}

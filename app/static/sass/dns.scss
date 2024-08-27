@@ -1,0 +1,114 @@
+.containerdns {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    .colunadns {
+        // flex-basis: 50%;
+        grid-column: 1/3;
+        .lista-colunas {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            margin-bottom: 0px;
+            .lista-img {
+                background-color: $bg-color;
+                border-radius: 3px;
+                .info-img {
+                    position: relative;
+                    display: inline-block;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 20px;
+                    #result-img{
+                        height: 100px;
+                        padding-left: 5px;
+                    }
+                    .desc {
+                        color: #fff;
+                        z-index: 9999;
+                    }
+                    .dns-success {
+                        border-radius: 3px 0px 0px 3px;
+                        border-left: 10px solid rgba(59, 214, 111, 1);
+                    }
+                    .dns-danger {
+                        border-radius: 3px 0px 0px 3px;
+                        border-left: 10px solid rgba(255, 0, 0, 1);
+                        animation: pulse 1s infinite;
+                    }
+                    .dns-warning{
+                        border-radius: 3px 0px 0px 3px;
+                        border: 5px solid rgba(220, 244, 2, 1);
+                        animation: pulse2 1s infinite;   
+                    }  
+                }
+            }
+            
+            @keyframes pulse {
+                0% {
+                    border-color: rgba(255, 0 , 0, 1);
+                }
+                50% {
+                    border-color: rgba(255, 0, 0, 0.4);
+                }
+                100% {
+                    border-color: rgba(255, 0, 0, 1);
+                }
+            }
+
+            @keyframes pulse2 {
+                0% {
+                    border-color: rgba(220, 244, 2, 1);
+                }
+                50% {
+                    border-color: rgba(220, 244, 2, 0.4)
+                }
+                100% {
+                    border-color: rgba(220, 244, 2, 1);
+                }
+            }
+        }       
+
+        img:hover + .desc {
+            display: block;
+        }
+    }
+    
+    .colunadns2 {
+        color: $secondary-leste;
+        font-size: 12px;
+        display: grid;
+        padding: 10px;
+        background-color: $bg-color;
+        span {
+            margin: 0;
+        }
+        .nome-dns {
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            i{
+                color: $secondary-leste;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+        .desc-dns {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            margin-top: -40px;
+            i {
+                color: $secondary-leste;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

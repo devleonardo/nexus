@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script src="https://unpkg.com/imask"></script>
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+                    <h2>FREEIPA<b class="name"> SERVIDORES</b></h2>
+                    <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+                {% endblock %}
+        </div>
+    </div>
+</section>
+<br><br>
+<section id="conteudo">
+    <div class="container">
+        <div class="orgContainer">
+          <div class="titlefree">
+            <h2 class="title">SERVIDORES INTEGRADOS</h2>
+        </div>
+        <div class="list1">
+              <main class="list">
+                  <form>
+                  <table class="table">
+                    <div class="thead" style="background: black;">
+                      <tr class="fixed-row">
+                        <th>ID</th>
+                        <th>Servidor</th>
+                        <th>Adicionado em</th>
+                      </tr>
+                    </div>
+                    <tbody class="tbode">
+                      {% for row in results %}
+                      <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  <button id="editarForm" style="display: none;" class="btn btn-success">Editar</button>
+                </form>
+              </main>
+        </div>
+        </div>        
+      </section>
+      <script src="../static/js/radius.js"></script>
+      {% endblock %}

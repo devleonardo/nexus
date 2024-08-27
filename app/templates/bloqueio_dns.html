@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+        {% block content %}
+        <section id="bar">
+            <div class="container banner">
+                <div id="user">
+                    {% block subcontent %}
+                        <h2>Bloqueio de <b class="name">domínios</b></h2>
+                        <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section class="dns-block">
+            <div class="container">
+                <form class="formulario-bloqueioDns" id="form-bloqueiodns" action="{{ url_for('bloqueio_dns.bloqueio_dns') }}" method="POST">
+                    <div class="bloqueio-dns">
+                        <ul class="list-group">
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="GRL02" id="grl02" name="GRL02">
+                                <label class="form-check-label" for="secondCheckbox">RDNS-GRL-02</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="SJI01" id="sji01" name="SJI01">
+                                <label class="form-check-label" for="secondCheckbox">SJI-01</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="SJI02" id="sji02" name="SJI02">
+                                <label class="form-check-label" for="thirdCheckbox">SJI-02</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="MRC01" id="mrc01" name="MRC01">
+                                <label class="form-check-label" for="thirdCheckbox">MRC-01</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="MRC02" id="mrc02" name="MRC02">
+                                <label class="form-check-label" for="thirdCheckbox">MRC-02</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="RDNS01" id="rdns01" name="RDNS01">
+                                <label class="form-check-label" for="thirdCheckbox">RDNS-01</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="RDNS02" id="rdns02" name="RDNS02">
+                                <label class="form-check-label" for="thirdCheckbox">RDNS-02</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="RDNS03" id="rdns03" name="RDNS03">
+                                <label class="form-check-label" for="thirdCheckbox">RDNS-03</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="RDNS04" id="rdns04" name="RDNS04">
+                                <label class="form-check-label" for="thirdCheckbox">RDNS-04</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="RDNS05" id="rdns05" name="RDNS05">
+                                <label class="form-check-label" for="thirdCheckbox">RDNS-05</label>
+                            </li>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="RDNS06" id="rdns06" name="RDNS06">
+                                <label class="form-check-label" for="firstCheckbox">RDNS-06</label>
+                            </li>
+
+                            <input type="hidden" id="atLeastOneSelected" name="atLeastOneSelected" value="false">
+
+                            <div class="select-all-checkbox form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" id="selectAll" name="selectAll">
+                                <label class="form-check-label" for="selectAll">Selecionar todos</label>
+                            </div>
+                            <div class="select-all-checkbox form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" id="REVERT" name="REVERT">
+                                <label class="form-check-label" for="revert" disabled>Reverter</label>
+                            </div>
+                            <li class="form-check form-switch">
+                                <input class="form-check-input me-1" type="checkbox" value="anablock" id="anablock" name="anablock">
+                                <label class="form-check-label" for="firstCheckbox">Update Anablock</label>
+                            </li>
+                        </ul>
+                        <div class="style-dns-input">
+                            <div class="dns-domain-style">
+                                <label for="exampleDataList" class="form-label">Título do e-mail:</label>
+                                <input class="form-control" list="datalistOptions" id="titulo" placeholder="Digite o título do e-mail" name="titulo" required>
+                            </div>
+                            <div class="dns-domain-style">
+                                <label for="exampleDataList" class="form-label">IP de direcionamento:</label>
+                                <input class="form-control" list="datalistOptions" id="ip" placeholder="Digite o IP" name="ip" required>
+                            </div>
+                            <div class="dns-domain-style">
+                                <label for="exampleDataList" class="form-label">Domínio:</label>
+                                <textarea class="form-control" list="datalistOptions" id="dominio" placeholder="Digite o domínio" name="dominio" required></textarea>
+                            </div>
+                            <button class="btn btn-success" id="bloqueardns">Executar</button>
+                        </div>
+                        <!-- Modal -->
+                        <div id="modalBlockdns" class="modal modal-dns">
+                            <div class="modal-content ">
+                                <h2>AVISO</h2>
+                                <p>Recomendamos que verifique novamente os dados preenchidos e os servidores selecionados.<br>
+                                Só confirme se estiver seguro de suas ações.</p>
+                                <div id="botaoModal">
+                                    <button class="btn btn-success" id="confirmBtnBlockdns" type="submit" name="blockdns" value="true">Confirmar</button>
+                                    <button class="btn btn-danger" id="cancelBtnBlockdns">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>   
+                <div class="dnsbcontainer-aviso">
+                    <div class="terminal-dns-status" id="log-content"></div>
+                    <p class="aguardando" id="dnsAguardando">Aguardando ação...</p>
+                </div>
+            </div>
+        </section>
+        <script src="../static/js/bloqueio_dns.js"></script>
+        <script src="/static/js/main.js"></script>
+        <script src="/static/js/dns_block.js"></script>
+        {% endblock %}

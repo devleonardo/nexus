@@ -1,0 +1,32 @@
+#conteudo {
+    .container {
+        background-color: $cor-container;
+        border-radius: 5px;
+        box-sizing: border-box;
+        .content {
+            padding: 20px;
+            .conjunto_info {
+                display: flex;
+                justify-content: space-between;
+
+                .informativo {
+                    font-size: 30px;
+                    font-weight: bold;
+                    padding-bottom: 10px;
+                }
+                .ultima_exec {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+            .lista {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+                li {
+                    height: 60px;
+                }
+            }
+        }
+    }
+}

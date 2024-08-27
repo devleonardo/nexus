@@ -1,0 +1,52 @@
+  /* INICIO DA BARRA DE PESQUISA */
+  #bar {
+    width: 100%;
+    background-color: $bg-color;
+    .banner{
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content:space-between;
+      height: 100px;
+      z-index: 10;
+      #user {
+        h2{
+          color: $title-color;
+          font-size: 25px;
+        }
+        .name {
+            color: $primary-leste;
+        }
+      }
+    }
+  }
+  
+  form {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  input[type="text"] {
+    width: 400px;
+  }
+  input[type="submit"] {
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 58px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: $bg-button-color;
+    color: $title-color;
+  }
+  input[type="submit"]:hover{
+    background-color: $secondary-leste;
+    color: $primary-color;
+    transition: 0.5s;
+  }
+    /* FINAL DA BARRA DE PESQUISA */

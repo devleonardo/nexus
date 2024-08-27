@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+            <h2>RELATÓRIO DE <b class="name"> PONTO</b></h2>
+            {% endblock %}
+        </div>
+    </div>
+</section>
+<br><br>
+<section id="conteudo">
+    <div class="container">
+        <main>
+            <div class="container-pai-ponto">
+                <div class="container-ponto">
+                    <form id="formulario" class="form-ponto">
+                        
+                        <div class="div-input-ponto">
+                            <div class="input-group">
+                                <input class="input-ponto" type="text" id="nome" name="nome" required>
+                                <label class="label-input" for="username">Nome</label>
+                            </div>
+                            <div class="input-group">
+                                <input class="input-ponto" type="text" id="setor" name="setor" required>
+                                <label class="label-input" for="username">Setor</label>
+                            </div>
+                        </div>
+                        <div class="div-mes-ponto">
+                            <div class="select-div-ponto">
+                                <label>
+                                    <select id="mes" class="select-mes-ponto">
+                                        <option value="" disabled selected>Mês</option>
+                                        <option value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6">Junho</option>
+                                        <option value="7">Julho</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <label class="label-check">
+                                <input checked="checked" name="tipo" type="checkbox">
+                                <div class="checkmark"></div>
+                                <p class="texto-check">Marca D'Agua Final de Semana</p>
+                            </label>
+                        </div> 
+                        <div class="radio-ponto">
+                            <ul class="ul-ponto">
+                                <li>
+                                    <div class="radio-item-ponto">
+                                        <input value="lestegroup" name="empresa" id="value-1" type="radio">
+                                        <label for="value-1">Leste Group</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio-item-ponto">
+                                        <input value="lestemulti" name="empresa" id="value-2" type="radio">
+                                        <label for="value-2">Multi Service</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio-item-ponto">
+                                        <input value="lestetecno" name="empresa" id="value-3" type="radio">
+                                        <label for="value-3">Tecnolab</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio-item-ponto">
+                                        <input value="lestesolucoes" name="empresa" id="value-4" type="radio">
+                                        <label for="value-4">Leste Soluções</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="radio-item-ponto">
+                                        <input value="lesteflu" name="empresa" id="value-5" type="radio">
+                                        <label for="value-5">Leste Flu</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="div-submit-ponto">
+                            <input class="submit-ponto" type="button" onclick="gerar()" value="Criar folha">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
+<script src="../static/js/ponto_grd.js"></script>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script src="https://unpkg.com/imask"></script>
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+                <h2>RADIUS<b class="name"> CONSULTA</b></h2>
+                <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+            {% endblock %}
+        </div>
+    </div>
+</section>
+<br><br>
+<section id="conteudo">
+    <div class="container">
+        <div class="orgContainer">
+            <div class="radiusform">
+                <form class="form" method="POST" action="{{ url_for('busca_radiusIP.radiusconsulta2') }}">
+                    <div class="selecttable">
+                        <label for="table">Selecione a Tabela:</label>
+                        <select name="table" id="table">
+                            {% for row in table_list %}
+                                <option value="{{ row }}">{{ row }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <label for="ip" class="ip"><i class="bi bi-person-check"></i> IP </label>
+                        <input type="text" class="form-control" id="ip" name="ip" placeholder="Digite aqui o ip da busca.." required>
+                    </div>
+                    <div class="dateformat">
+                        <div class="col-autodate">
+                            <label for="datepicker"><i class="bi bi-calendar-date"></i> Data Inicial:</label>
+                            <input type="date" class="form-control" id="datepicker" name="datepicker" required>
+                        </div>
+                        <div class="col-autodate">
+                            <label for="datepickerfinal"><i class="bi bi-calendar-date"></i> Data Final:</label>
+                            <input type="date" class="form-control" id="datepickerfinal" name="datepickerfinal" required>
+                        </div>
+                    </div>
+                        <button type="submit"  class="btn btn-info"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+            <div class="lista">
+                <main class="list">
+                    <table class="table">
+                        <thead style="background: black;">
+                            <tr class="fixed-row">
+                                <th>cliente</th>
+                                <th>Data Inicial</th>
+                                <th>Data Final</th>
+                                <th>IP</th>
+                                <th>MAC</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            {% if results %}
+                                {% for row in results %}
+                                    <tr class="table">
+                                        <td>{{ row[0] }}</td>
+                                        <td>{{ row[1] }}</td>
+                                        <td>{{ row[2] }}</td>
+                                        <td>{{ row[3] }}</td>
+                                        <td>{{ row[4] }}</td>
+                                        <td>{{ row[5] }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="6">Nenhum resultado encontrado.</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </main>
+            </div>
+        </div>
+    </div>   
+</section>
+<script src="../static/js/radius.js"></script>
+{% endblock %}

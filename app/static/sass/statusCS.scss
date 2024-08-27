@@ -1,0 +1,70 @@
+.btn-link{
+    text-decoration: none !important;
+}
+
+.containerIX{
+    background-color: $third-leste !important;
+    .cardTitle{
+        i{
+            color: $whitesmoke-leste;
+        }
+        font-weight: 900;
+        color: $whitesmoke-leste;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .statusOk{
+            color: $sucess;
+        }
+        .statusError{
+            color: $exit-color;
+        }
+        .statusWarning{
+            color: yellow;
+        }
+    }
+}
+
+.cardIX{
+    border: none !important;
+}
+
+.tabelaIX{
+    background-color: $cor-container !important;
+    padding: 0 !important;
+    margin-bottom: 0;
+    border: none;
+}
+
+#listaIX{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    margin: 0;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 18px;
+        li{
+            height: 24px !important;
+            padding-right: 0 !important;
+        }
+        li:nth-child(1){
+            width: fit-content;
+            text-align: left !important;
+        }
+        li:nth-child(2){
+            padding-right: 30px;
+        }
+        .statusOk{
+            color: $sucess;
+        }
+        .statusError{
+            color: $exit-color;
+        }
+        .rightCS{
+            display: flex;
+            gap: 10px;
+        }
+    }
+}

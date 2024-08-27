@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section id="bar">
+        <div class="container banner">
+            <div id="user">
+                <!-- <img src="static/Server-bro.png" alt=""> -->
+                {% block subcontent %}
+                    <h2>Bem-vindo, <b class="name">{{ session['first_name'] }}</b>!</h2>
+                    <!-- Rest of the dashboard content -->
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section>
+        <div id="dadosAd" class="container">
+            <div class="dadosPainel userAD">
+                <div>
+                    <i class="bi bi-person-fill"></i>
+                    <h2>{{ numero_usuarios }}</h2>
+                    <p>Numero total de usuários</p>
+                </div>
+            </div>
+            <div class="dadosPainel userActiveAD">
+                <div>
+                    <i class="bi bi-person-fill-check"></i>
+                    <h2>{{ numero_usuarios_ativos }}</h2>
+                    <p>Total de usuários ativos</p>
+                </div>
+            </div>
+            <div class="dadosPainel userBlockAD">
+                <div>
+                    <i class="bi bi-person-fill-slash"></i>
+                    <h2>{{ numero_usuarios_bloqueados }}</h2>
+                    <p>Total de usuários bloqueados</p>
+                </div>
+            </div>
+            <!-- <div class="dadosPainel expiringPassdAD">
+                <div>
+                    <i class="bi bi-key-fill"></i>
+                    <h2>{{ numero_senhas_expirar }}</h2>
+                    <p>Senhas a expirar em 30 dias</p>
+                </div>
+            </div> -->
+            <div class="dadosPainel computerAD">
+                <div>
+                    <i class="bi bi-pc"></i>
+                    <h2>{{ numero_computadores }}</h2>
+                    <p>Numero total de estações</p>
+                </div>
+            </div>
+            <div class="dadosPainel ouAD">
+                <div>
+                    <i class="bi bi-folder-fill"></i>
+                    <h2>{{ numero_unidades }}</h2>
+                    <p>Total de Unidades Organizacionais</p>
+                </div>
+            </div>
+            <div class="dadosPainel groupAD">
+                <div>
+                    <i class="bi bi-people-fill"></i>
+                    <h2>{{ numero_grupos }}</h2>
+                    <p>Numero total de grupos</p>
+                </div>
+            </div>
+            <div class="dadosPainel domainControllerAD">
+                <div>
+                    <i class="bi bi-people-fill"></i>
+                    <h2>{{ numero_controlador_dominio }}</h2>
+                    <p>Controladores de domínios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

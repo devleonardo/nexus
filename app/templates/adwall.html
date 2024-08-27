@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="/static/css/animation.css">
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+                    <h2>WALLPAPER<b class="name"> AD</b></h2>
+                    <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="conteudo">
+        <div class="container" id="wallContainer">
+            <div class="wallLadoUm">
+                <div class="wallAlerta">
+                    <h1 class="alertaTitulo">Atenção!</h1>
+                    <p class="alertaDescricao">Só envie imagens autorizadas pelo setor de comunicações. <br>
+                        É estritamente proibido o envio de imagens não cedidas por tal setor.</p>
+                    </div>
+                    <form class="wallForm" enctype="multipart/form-data" action="{{ url_for('adwall.ad_wall') }}" method="POST">
+                        <div class="mb-3 wallInput">
+                            <label for="formFile" class="form-label">Selecione a imagem.</label>
+                            <input class="form-control" type="file" id="wallImagem" name="wallImagem" accept="image/*" required>
+                        </div>
+                        <!-- Modal -->
+                        <div id="modalWallpaper" class="modal">
+                            <div class="modal-content ">
+                                <h2>ATENÇÃO</h2>
+                                <p>Tem certeza que deseja alterar o papel de parede?</p>
+                                <div id="botaoModalWallpaper">
+                                    <button class="btn btn-success carregar" id="confirmBtnWall" type="submit" name="mudarWallpaper">Confirmar</button>
+                                    <button class="btn btn-danger" id="cancelBtnWall">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Modal -->
+                    </form>
+                    <button type="button" id="wallOpenModal" class="btn btn-success" disabled>Enviar</button>
+                </div>
+                <div class="wallLinha"></div>
+                <div class="wallLadoDois">
+                    <div class="wallAtual">
+                        <label class="wallAtualDesc">Papel de parede atual</label>
+                        <img class="imagemAtual" src="/static/wallpaper/wallpaper.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="carregamento" class="loader">
+            <div class="loader-content">
+              <img src="/static/img/loader.gif" id="gif" alt="Carregando...">
+            </div>
+        </div>
+        <script src="../static/js/adwall.js"></script>
+        {% endblock %}
+        

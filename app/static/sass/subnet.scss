@@ -1,0 +1,80 @@
+.input-subnet-select {
+    border-radius: 8px;
+    width: 200px;
+    background-color: $branco-leste;
+    outline: none;
+    margin-left: 15px;
+    border: none;
+  }
+  
+  #mac-subnet {
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 30px !important;
+    color: $preto-leste !important;
+    padding: 0px !important;
+    border-radius: 8px !important;
+    height: fit-content !important;
+  
+    .output-section {
+      margin-top: 30px;
+  
+      .div-table-subrede {
+        background-color: transparent;
+        border-radius: 5px;
+        min-width: 800px;
+        min-height: 20vw;
+  
+        .table-title {
+          background-color: #3a434e;
+          border-bottom: 2px solid $secondary-leste;
+          color: $branco-leste;
+          padding: 10px 15px;
+          font-size: 1.5em;
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+          min-height: 65px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+  
+        .table-subnet {
+          width: 100%;
+          position: relative;
+          bottom: 20px;
+          min-height: 19vw;
+  
+          .th-subnet,
+          .td-subnet {
+            height: 50px;
+            padding: 12px 15px;
+            border-bottom: 1px solid $grey-leste;
+          }
+  
+          .td-subnet {
+            max-width: 100px;
+            color: $branco-leste;
+            font-weight: 300;
+            font-size: larger;
+          }
+  
+          .th-subnet {
+            text-align: left;
+            background-color: #242930;
+            max-width: 30px;
+            min-width: 30px;
+            color: white;
+            font-size: larger;
+            font-weight: bold;
+          }
+  
+          tr {
+            background-color: #3a434e;
+          }
+        }
+  
+      }
+  
+    }
+  }

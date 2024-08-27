@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+            <h2>CALCULADORA DE<b class="name"> SUB-REDE</b></h2>
+            {% endblock %}
+        </div>
+    </div>
+</section>
+<br><br>
+<section id="conteudo">
+    <div class="container">
+        <main>
+            <div class="subnet-div">
+                <div class="input-section">
+                    <form method="POST" id="form-subnet" action="{{ url_for('subnet.subnet') }}">
+                        <div class="containerIp">
+                            <label class="label-subnet" for="ip-address">Endereço IP</label>
+                        </div>
+                        <input class="input-subnet" type="text" id="ip" name="ip" placeholder="0.0.0.0 ou 00:00:00:00:00:00:00:00" value="{{ ip }}" required>
+                        <label class="label-subnet" for="ip-address">Notação</label>
+                        <select class="input-subnet" name="cidr" id="cidr">
+                            <option value="32">/32</option>
+                            <option value="31">/31</option>
+                            <option value="30">/30</option>
+                            <option value="29">/29</option>
+                            <option value="28">/28</option>
+                            <option value="27">/27</option>
+                            <option value="26">/26</option>
+                            <option value="25">/25</option>
+                            <option value="24" selected>/24</option>
+                            <option value="23">/23</option>
+                            <option value="22">/22</option>
+                            <option value="21">/21</option>
+                            <option value="20">/20</option>
+                            <option value="19">/19</option>
+                            <option value="18">/18</option>
+                            <option value="17">/17</option>
+                            <option value="16">/16</option>
+                            <option value="15">/15</option>
+                            <option value="14">/14</option>
+                            <option value="13">/13</option>
+                            <option value="12">/12</option>
+                            <option value="11">/11</option>
+                            <option value="10">/10</option>
+                            <option value="9">/9</option>
+                            <option value="8">/8</option>
+                            <option value="7">/7</option>
+                            <option value="6">/6</option>
+                            <option value="5">/5</option>
+                            <option value="4">/4</option>
+                            <option value="3">/3</option>
+                            <option value="2">/2</option>
+                            <option value="1">/1</option>
+                        </select>
+                    </form>
+                    <div class="botao-subnet">
+                        <button class="button-subnet" id="bt-enviar" type="submit">Calcular</button>
+                    </div>
+                </div>
+                <div class="output-section">
+                    <h2 class="h2-subnet">Informações da rede</h2>
+                    <hr class="hr-subnet">
+                    <table class="table-subnet">
+                        <tr class="tr-subnet">
+                            <th class="th-subnet">Endereço IP</th>
+                            <td class="td-subnet">{{ ip if ip else "N/A" }}</td>
+                        </tr>
+                        <tr class="tr-subnet">
+                            <th class="th-subnet">Endereço da rede</th>
+                            <td class="td-subnet">{{ network if network else "N/A" }}</td>
+                        </tr>
+                        <tr class="tr-subnet">
+                            <th class="th-subnet">Endereço de broadcast</th>
+                            <td class="td-subnet">{{ broadcast if broadcast else "N/A" }}</td>
+                        </tr>
+                        <tr class="tr-subnet">
+                            <th class="th-subnet">Número de hosts</th>
+                            <td class="td-subnet">{{ total_host if total_host else "N/A" }}</td>
+                        </tr>
+                        <tr class="tr-subnet">
+                            <th class="th-subnet">Máscara</th>
+                            <td class="td-subnet">{{ mascara_rede if mascara_rede else "N/A" }}</td>
+                        </tr>
+                        <tr class="tr-subnet">
+                            <th class="th-subnet">Faixa de IP de hosts utilizáveis</th>
+                            <td class="td-subnet">{{ primeiro_host if primeiro_host else "N/A" }} - {{ ultimo_host if
+                                ultimo_host else "N/A" }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
+<script src="../static/js/subnet.js"></script>
+{% endblock %}

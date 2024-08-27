@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- ########################################################################################################################################## -->
+<!-- BARRA DE BEM VINDO E INPUT DE TESTES DE DNS -->
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            <h2>Consulta de usuários e estações no <b class="name">AD</b></h2>
+        </div>
+        <div id="consulta">
+            <form method="POST" class="form-floating" action="{{ url_for('busca.search_users') }}">
+                <input type="text" class="form-control" id="floatingInputValue" id="meuInput" name="search_query" placeholder="www.google.com.br" required>
+                <label for="floatingInputValue">Nome do usuário ou da estação:</label>
+                <input type="submit" class="carregar" id="buscarAD" value="Buscar" disabled>
+            </form>
+        </div>
+    </div>
+</section>
+<div id="aviso" class="alert alert-light container" role="alert">
+    <strong>Para buscar um usuário digite: </strong> nome do usuário, primeiro nome, nome completo ou e-mail.
+    <br>
+    <strong>Observação:</strong> Ao digitar o primeiro nome será listado todos os usuários correspondentes.
+</div>
+<!-- Search Results -->
+{% if search_results %}
+    <section id="userSearch">
+        <div class="listagem container">
+            <table id="searchResult">
+                <caption>Lista de usuários correspondentes</caption>
+                <tr class="titulo">
+                    <th scope="col"><i class="bi bi-person"></i> Nome de usuário</th>
+                    <th scope="col"><i class="bi bi-person-add"></i> Nome completo</th>
+                    <th scope="col"><i class="bi bi-body-text"></i> Descrição</th>
+                    <th scope="col"><i class="bi bi-exclamation-circle-fill"></i> Status da conta</th>
+                    <th scope="col"><i class="bi bi-person-video3"></i> Tipo</th>
+                    <th scope="col"><i class="bi bi-gear-fill"></i> Ação</th>
+                </tr>
+                {% for result in search_results %}
+                    <tr class="buscados">
+                        <td>
+                            <a class="carregar" href="{{ url_for('busca.show_user_details', username=result[0]) }}">
+                                <i class="bi bi-gear-fill"></i> {{ result[0] }}
+                            </a>
+                        </td>
+                        <td>{{ result[1] }}</td>
+                        <td>{{ result[2] }}</td>
+                        <td>{{ result[3] }}</td>
+                        <td>{{ result[4] }}</td>
+                        {% if 'Usuário' in result[4] %}
+                        <td>
+                            <a class="carregar" href="{{ url_for('busca.create_user_f', username=result[0]) }}">
+                                <i class="bi bi-box-arrow-right"></i> Copiar Usuário
+                            </a>
+                        </td>
+                        {% else %}
+                        <td>
+                            <a class="carregar" href="{{ url_for('busca.show_user_details', username=result[0]) }}">
+                                <i class="bi bi-box-arrow-right"></i> Mover/Remover OU
+                            </a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+{% endif %}
+<script src="/static/js/buscaAD.js"></script>
+{% endblock %}

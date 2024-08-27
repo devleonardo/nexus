@@ -1,0 +1,89 @@
+.domain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+
+    .dominio{
+        width: 80px;
+        background-color: $bg-color;
+        margin-right: 10px !important;
+        margin: 1px 0;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        color: white !important;
+        a{
+            color: $title-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $tertiary-color;
+            }
+        }
+    }
+    
+    ul{
+        list-style: none;
+        margin: 1px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        li{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0 1px;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+    
+    .container{
+        padding: 8px !important;
+        font-size: 12px;
+    }
+    
+    .sucesso{
+        background-color: #3BD66F;
+        color: black;
+    }
+    .falha{
+        background-color: $exit-color;
+        color: white;
+        animation: animate 1.5s linear infinite;
+    }
+    .timeout{
+        background-color: $warning-color;
+        color: black;
+        animation: animate 1.5s linear infinite;
+    }
+    .no_reply{
+        background-color: black;
+        color: white;
+        animation: animate 1.5s linear infinite;
+    }
+    .erro{
+        background-color: $exit-color;
+        color: white;
+        animation: animate 1s linear infinite;
+    }
+    
+    @keyframes animate{
+        0%{
+          opacity: 0;
+        }
+        50%{
+          opacity: 1;
+        }
+        100%{
+          opacity: 0;
+        }
+    }
+}

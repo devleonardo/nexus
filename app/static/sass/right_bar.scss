@@ -1,0 +1,63 @@
+/* INICIO DA BARRA LATERAL */
+#offcanvasDarkNavbar{
+  padding-right: 20px;
+  .offcanvas-header{
+    padding: 20px 10px 30px 30px !important;
+  }
+  .exit{
+    margin-left: 30px;
+    li {
+      i{
+        margin-right: 10px;
+        color: $exit-color;
+        font-size: 20px;
+        padding: 0;
+      }
+    }
+  }
+  .painel{
+    padding: 0 10px 0 30px;
+    li{
+      span{
+        font-weight: bold;
+        color: $primary-leste;
+      }
+    }
+  }
+}
+.grupo{
+  color: $title-color !important;
+  font-weight: 400 !important;
+  background-color: $group-color;
+  padding: 2px 5px !important;
+  border-radius: 5px;
+  margin: 3px 1px;
+  font-size: 14px;
+}
+.navbar{
+  i{
+    color: $primary-leste;
+    font-size: 40px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+  }
+  i:hover{
+    color: $title-color;
+  }
+}
+.offcanvas-title i{
+  font-size: 20px;
+}
+.logout a{
+  font-weight: bold;
+  color: $title-color;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.logout a:hover{
+  color: $secondary-leste;
+  transition: 0.5s;
+}
+/* FINAL DA BARRA LATERAL */

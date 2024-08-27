@@ -1,0 +1,33 @@
+.orgContainer{
+        .titlefree{
+            display: flex;
+            justify-content: center;
+        }
+        .list1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, var(--start-color) var(--stop), var(--end-color) var(--stop));
+            .list{
+                animation: fadeIn 1s ease forwards;
+                opacity: 0;
+                overflow-y: auto;
+                max-height: 500px;
+                width: 100%;
+        
+                tr:hover,
+                tr:focus {
+                    background-color: $whitesmoke-leste;
+                    transform: translateX(1px) scale(1.0);
+                    transform: translatey(1px) scale(1.0);
+                }
+        
+                td {
+                    background-color: transparent;
+                }
+        
+            }
+        }
+
+}

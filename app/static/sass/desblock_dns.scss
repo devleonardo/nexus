@@ -1,0 +1,139 @@
+.dns-desblock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: min-content !important;
+    overflow-y: hidden;
+
+    .container {
+        display: flex;
+        box-sizing: border-box;
+        padding: 30px !important;
+        border-radius: 10px;
+        background-color: $title-color;
+        gap: 20px;
+        height: fit-content;
+
+        .container-left {
+            width: 40%;
+            height: 100%;
+
+            #dominios-desblock {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .div-dominios {
+                display: flex;
+                flex-wrap: wrap;
+                height: 500px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                .item-list {
+                    margin-right: 6px;
+                    padding: 3px 10px !important;
+                    background-color: #101114;
+                    border-radius: 5px;
+                    margin-bottom: 5px;
+                    color: #ffffff;
+                    font-size: 17px;
+                    display: flex;
+                    max-height: 30px;
+                }
+
+                .item-list a {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                .item-list a:hover {
+                    color: #d0d0d0;
+                }
+            }
+        }
+
+        .container-right {
+            width: 60%;
+            height: 500px;
+            border-left: 1px solid $primary-leste;
+            padding: 15px;
+
+            .div-dominios {
+                display: flex;
+                flex-wrap: wrap;
+
+                .item-list {
+                    margin-right: 6px;
+                    padding: 3px 10px !important;
+                    background-color: #101114;
+                    border-radius: 5px;
+                    margin-bottom: 5px;
+                    color: #ffffff;
+                    font-size: 17px;
+                    display: flex;
+                    max-height: 30px;
+                }
+
+                .item-list a {
+                    text-decoration: none;
+                    color: $primary-leste;
+                }
+
+                .item-list a:hover {
+                    color: #d0d0d0;
+                }
+            }
+
+            .input-dominio {
+                display: block;
+                width: 100%;
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: var(--bs-body-color);
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-color: var(--bs-body-bg);
+                background-clip: padding-box;
+                border: var(--bs-border-width) solid var(--bs-border-color);
+                border-radius: var(--bs-border-radius);
+                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            }
+
+            .text-selected {
+                font-size: 19px;
+                margin-top: 10px;
+            }
+
+            .div-button {
+                display: flex;
+                justify-content: end;
+
+                .botaoExecutar {
+                    width: 60% !important;
+                    margin-top: 30px !important;
+                    font-weight: bold;
+                    background: $primary-leste;
+                    color: white;
+                    border-radius: 5px;
+                    border: none;
+                    transition: all 0.2s ease-in-out;
+                    height: 45px;
+                }
+
+                .botaoExecutar:hover {
+                    transform: scale(1.03);
+                }
+
+                .botaoExecutar:active {
+                    transform: scale(0.95);
+                }
+            }
+
+        }
+    }
+}

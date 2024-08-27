@@ -1,0 +1,58 @@
+.permissao-dns {
+    display: flex;
+    width: 100%;
+    .container {
+        display: flex;
+        box-sizing: border-box;
+        padding: 30px !important;
+        border-radius: 10px;
+        background-color: $title-color;
+        gap: 10px;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        
+        .usuarios-permitidos {
+            border: solid 1px $cl-border;
+            border-radius: 5px;
+            background-color: $bg-input-color;
+            padding: 15px;
+        }
+        .removerPermissao {
+            margin: 0;
+            height: 100%;
+            .selecionar-permitidos {
+                border: solid 1px $cl-border;
+                border-radius: 5px;
+                background-color: $bg-input-color;
+                padding: 15px;
+            }
+    
+            #remover-permissao {
+                margin-top: 10px;
+            }
+        }
+
+        .concederPermissao {
+            height: 100%;
+            margin: 0;
+            .conceder-permissao {
+                border: solid 1px $cl-border;
+                border-radius: 5px;
+                background-color: $bg-input-color;
+                padding: 15px;
+            }
+    
+            #conceder-permissao {
+                margin-top: 10px;
+            }
+        }
+
+        #remocao-sucesso {
+            position: absolute;
+            margin-top: 12%;
+            display: none;
+            height: auto;
+        }
+    }
+}

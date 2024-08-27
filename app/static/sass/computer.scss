@@ -1,0 +1,73 @@
+// INFO ESTAÇÕES
+#info_pc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: $title-color;
+    padding: 30px !important;
+    border-radius: 10px;
+  }
+  
+  // CARD DE ALERTA SOBRE REMOÇÃO DE ESTAÇÕES
+  .alertCard{
+    display: grid;
+    gap: 30px;
+    #notice{
+      background-color: $bg-input-color;
+      padding: 30px;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .notice{
+        color: $tertiary-color;
+      }
+    }
+  }
+  
+  // CARD DE AVISO SOBRE MOVER ESTAÇÕES
+  .alertCard2{
+    display: grid;
+    gap: 30px;
+    #atention{
+        background-color: $bg-input-color;
+        padding: 30px;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .atention{
+            color: $exit-color;
+        }
+    }
+}
+  
+// SINAL DE ATENÇÃO
+  .alertAd{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+// BOTÃO PARA REMOÇÃO DE ESTAÇÃO DO AD
+#remove{
+    height: 38px;
+}
+  
+  // ALERTA DE PERMISSÃO NEGADA AO TENTAR REMOVER ESTAÇÃO NÃO PERMITIDA
+  .permissaoNegada{
+    padding: 20px !important;
+    text-align: center;
+}
+
+// OCULTANDO CARACTERISTICAS DO INPUT COM A OU NO MODAL
+.ocultar{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -10px;
+    color: $tertiary-color !important;
+}
+  .ocultar:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}

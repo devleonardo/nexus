@@ -1,0 +1,94 @@
+.orgContainer {
+    padding: 30px;
+    .radiusform {
+        padding: 10px;
+        align-items: center;
+        display: flex;
+        width: auto;
+        // text-align: center;
+        background-color: $branco-leste;
+        // border: 1px solid #ccc;
+        border-radius: 5px;
+        animation: fadeIn 1s ease forwards;
+        opacity: 0;
+        justify-content: center;
+        
+        form {
+            .selecttable{
+            /* display: block; */
+            /* height: 91px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // max-height: 25px;
+            // margin-top: 31px;
+            gap: 20px;
+            // margin-right: 10px;
+                #table{
+                    border: none;
+                    height: 38px;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    padding-left: 5px;
+                }
+            }
+            .dateformat{
+                gap: 10px;
+                display: inherit;
+            }
+            .btn {
+                margin-top: auto;
+                margin: 25px;
+                display: flex;
+                max-width: 171px !important;
+                max-height: 41px !important;
+                background-color: $secondary-leste;
+                color: $preto-leste;
+                transition: 0.5s;
+                transition: background-color 0.3s ease;
+                border-radius: 5px;
+                border: none;
+                /* Transição suave */
+            }
+
+            .btn:hover {
+                background-color: $primary-leste;
+                color: $branco-leste;
+            }
+
+            input[type="text"] {
+                width: 200px;
+                margin-right: 10px;
+
+            }
+
+            .information {
+                font-size: 12px;
+                max-width: 178px;
+            }
+        }
+    }
+    .lista{
+        .list {
+            display: flex;
+            overflow-y: auto;
+            .table{
+                margin-bottom: 0px;
+            }
+            // max-height: 500px;
+    
+            // tr:hover,
+            // tr:focus {
+            //     background-color: #ddd9d9;
+            //     transform: translateX(1px) scale(1.0);
+            //     transform: translatey(1px) scale(1.0);
+            // }
+    
+            td {
+                background-color: transparent;
+            }
+    
+        }
+
+    }
+}

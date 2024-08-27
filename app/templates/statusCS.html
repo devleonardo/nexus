@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="/static/css/animation.css">
+    <script src="../static/js/statusIX.js"></script>
+    <section id="bar">
+        <div class="container banner">
+            <div id="user">
+                <h2>CLICK<b class="name">SIGN</b></h2>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="conteudo">
+        <div class="container">
+            <div class="content">
+                <div class="conjunto_info">
+                    <div class="informativo">
+                        <i class="bi bi-pen"></i> Clicksign
+                    </div>
+                    <div class="ultima_exec">
+                       Última atualização: {{ dataConsulta }}
+                    </div>
+                </div>
+                <div class="card cardIX">
+                    <button class="btn btn-link collapsed tabelaIX" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="botaoRio">
+                    <div class="card-header containerIX">
+                        <ul class="cardTitle">
+                            <li class="baseIX">
+                                <i class="bi bi-dash-circle-dotted" id="collapseRio""></i>
+                                Clicksign
+                            </li>
+                            <li>
+                                {% if appStatus == 'Operational' and deskStatus == 'Operational' %}
+                                <i class="bi bi-check2-circle statusOk" ></i>
+                                {% else %}
+                                <i class="bi bi-exclamation-triangle statusWarning"></i>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                    </button>
+                    <div id="collapseOne" class="collapse tabelaIX show" aria-labelledby="headingOne">
+                      <div class="card-body tabelaIX">
+                        <ul class="lista" id="listaIX">
+                            <ul>
+                                <li> {{ appCS }} </li>
+                                <span class="rightCS">
+                                    {% if appStatus == 'Operational' %}
+                                    <li> Operacional </li>
+                                    <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                    <li> <a href="https://status.clicksign.com/">{{ appStatus }}</a> </li>
+                                    <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                            <ul>
+                                <li> {{ deskCS }} </li>
+                                <span class="rightCS">
+                                    {% if deskStatus == 'Operational' %}
+                                    <li> Operacional </li>
+                                    <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                    <li> <a href="https://status.clicksign.com/">{{ deskStatus }}</a> </li>
+                                    <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                        </ul> 
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

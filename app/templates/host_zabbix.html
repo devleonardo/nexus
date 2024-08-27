@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="/static/css/animation.css">
+    <section id="bar">
+        <div class="container banner">
+            <div id="user">
+                {% block subcontent %}
+                    <h2>Host <b class="name">Zabbix</b></h2>
+                    <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="conteudo">
+        <div class="container hostZabbix">
+            <form class="novo-host" action="{{ url_for('host_zabbix.host_zabbix') }}" method="POST">
+                <div class="org-input">
+                    <div class="novoHost">
+                        <label for="exampleDataList" class="form-label">Nome do host:</label>
+                        <input class="form-control" list="datalistOptions" id="novo_host" placeholder="Digite o nome do host" name="novo_host" required>
+                    </div>
+                    <div class="novoHost">
+                        <label for="exampleDataList" class="form-label">IP do host:</label>
+                        <input class="form-control" list="datalistOptions" id="novo_ip" placeholder="Digite o IP" name="novo_ip" required>
+                    </div>
+                    <div class="tipo-conexao">
+                        <label class="conexao-type">Tipo de conexão:</label>
+                        <select class="form-select" id="conexao" aria-label="Default select example" name="tipo_conexao">
+                            <option value="1">Agent</option>
+                            <option value="2">SNMP v1</option>
+                            <option value="21">SNMP v2</option>
+                            <option value="22">SNMP v3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Descrição:</label>
+                        <textarea class="form-control" id="descricao" name="descricao" rows="3" placeholder="Digite a descrição do host" required></textarea>
+                    </div>
+                    <div class="novoHost macros-field">
+                        <label for="exampleDataList" class="form-label">Macros:</label>
+                        <input class="form-control" list="datalistOptions" id="macros" placeholder="Digite o valor do macro" name="macros" required>
+                    </div>
+                </div>
+                <div class="split-tg">
+                    <div class="org-all">
+                        <label class="templates-label">Templates:</label>
+                        <div class="list-templates">
+                            <ul class="templates-list">
+                                {% for template in templates_list %}
+                                <li>
+                                    <input type="checkbox" value="{{ template.split(': ')[2] }}" name="novos_templates"></input>
+                                    <label class="template-name">{{ template.split(': ')[1] }}</label>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <input class="form-control" type="text" id="searchInput" onkeyup="searchInList()" placeholder="Buscar templates...">
+                    </div>
+                    <div class="org-allII">
+                        <label class="templates-labelII">Grupos de hosts:</label>
+                        <div class="list-templatesII">
+                            <ul class="templates-listII">
+                                {% for grupo in grupos_list %}
+                                <li>
+                                    <input type="checkbox" value="{{ grupo.split(': ')[2] }}" name="novo_grupo"></input>
+                                    <label class="template-nameII">{{ grupo.split(': ')[1] }}</label>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <input class="form-control" type="text" id="searchInputII" onkeyup="searchInListII()" placeholder="Buscar grupo de hosts...">
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div id="modalCriarHost" class="modal modal-zabbix">
+                    <div class="modal-content ">
+                        <h2>ATENÇÃO</h2>
+                        <p>Tem certeza que deseja criar o host com as informações preenchidas?</p>
+                        <div id="botaoModal">
+                            <button class="btn btn-success carregar" id="confirmBtnCriarHost" type="submit" name="criarhost" value="true">Confirmar</button>
+                            <button class="btn btn-danger" id="cancelBtnCriarHost">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim Modal -->
+            </form>
+            <div class="btn-execute">    
+                <button class="btn btn-success" id="criar_host" type="submit" disabled>Criar</button>
+            </div>
+        </div>
+    </section>
+    <script src="/static/js/host_zabbix.js"></script>
+{% endblock %}

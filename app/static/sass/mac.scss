@@ -1,0 +1,29 @@
+#mac {
+    border-radius: 4px;
+    background-color: $title-color;
+    padding: 30px !important;
+    color: $primary-color !important;
+    .mac{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        color: $group-color;
+        font-weight: 700;
+        p {
+            font-size: 25px;
+        }
+        #mac_resultado{
+            color: $primary-leste;
+            font-size: 30px;
+        }
+    }
+    p {
+        font-size: 14px;
+        color: $tertiary-color;
+        :first-child{
+            font-size: 16px;
+        }
+    }
+
+}

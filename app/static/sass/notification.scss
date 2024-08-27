@@ -1,0 +1,188 @@
+.login-error {
+  right: 0 !important;
+  bottom: 1% !important;
+}
+.notification-success {
+    margin-right: 20px;
+    margin-top: -20px;
+    right: 0;
+    position: absolute;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+  }
+
+  .notification-error {
+    margin-right: 20px;
+    margin-top: -20px;
+    right: 0;
+    position: absolute;
+    border-radius: 12px;
+    background: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+  }
+
+  .notification-success.active {
+    transform: translateX(0%);
+    animation: fadeOut 5s forwards;
+  }
+
+  .notification-error.active {
+    transform: translateX(0%);
+    animation: fadeOut 5s forwards;
+  }
+
+  .notification-success .notification-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .notification-error .notification-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .notificationCheck-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    font-size: 40px;
+    color: $sucess;
+    border-radius: 50%;
+  }
+
+  .notificationCheck-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    min-width: 35px;
+    font-size: 40px;
+    color: red;
+    border-radius: 50%;
+  }
+
+  .notification-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+
+  .message .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+  }
+
+  .message .text.text-1 {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .notification-success .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 20px;
+  }
+
+  .notification-error .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 20px;
+  }
+
+  .notification-success .close:hover {
+    opacity: 1;
+  }
+
+  .notification-error .close:hover {
+    opacity: 1;
+  }
+
+  .notification-success .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+  }
+
+  .notification-error .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+  }
+
+  .notification-success .progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $sucess;
+  }
+
+  .notification-error .progress:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ff0019;
+  }
+
+  .progress.active:before {
+      animation: progress 5s linear forwards;
+  }
+
+
+  @keyframes progress {
+      100% {
+          right: 100%;
+      }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

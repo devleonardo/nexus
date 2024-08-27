@@ -1,0 +1,48 @@
+.div-formularioUrl{
+    display: flex;
+}
+
+
+#busca-url {
+    .td-url{
+        max-width: 150px !important;
+        overflow-wrap: anywhere;
+    }
+    .th-url {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: -20px;
+        border-bottom: 2px solid $secondary-leste;
+        .titulo{
+            width: 200px;
+            color: white;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+
+            .copiarURL {
+                font-size: 15px;
+                right: 100%;
+                background-color: $primary-leste;
+                border: none;
+                width: 150px;
+                min-width: 150px;
+                color: $branco-leste;
+                border-radius: 2px;
+                margin-left: 5px;
+                height: 40px;
+                margin-bottom: 5px;
+            }
+
+            .copiarURL:hover {
+                background-color: $secondary-leste;
+                color: $third-leste;
+            }
+        }
+    }
+}

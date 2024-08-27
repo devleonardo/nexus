@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section id="bar">
+        <div class="container banner">
+            <div id="user">
+                {% block subcontent %}
+                    <h2>Permissão de acesso - <b class="name">ZABBIX</b></h2>
+                    <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section class="permissao-dns">
+        <div class="container">
+            <div class="usuarios-permitidos">
+                <h2>Usuários permitidos:</h2>
+                <ul>
+                    {% for user in PERMITIDO %}
+                        <li>{{ user }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <form class="removerPermissao" id="remover-form" action="{{ url_for('permissao_zabbix.permissao_zabbix') }}" method="POST">
+                <div class="selecionar-permitidos">
+                    <h2>Remover permissão:</h2>
+                    <select class="form-select ouSelect" id="listaSuspensa" name="negar">
+                        {% for user in PERMITIDO %}
+                            <option name="selected_ou">{{ user }}</option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-danger" id="remover-permissao" type="submit" name="negar">Remover</button>
+                </div>
+            </form>
+            <form class="concederPermissao"  id="conceder-form" action="{{ url_for('permissao_zabbix.permissao_zabbix') }}" method="POST">
+                <div class="conceder-permissao">
+                    <h2>Conceder permissão:</h2>
+                    <input class="form-control" id="allow-permission" name="conceder" placeholder="Digite o login do usuário..." required>
+                    <button class="btn btn-success" id="conceder-permissao" type="submit" name="conceder" value="true">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock %}

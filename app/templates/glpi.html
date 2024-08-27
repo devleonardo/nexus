@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        body {
+            overflow: hidden !important;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/css/animation.css">
+    <section id="conteudo">
+        <div class="glpi">
+            <iframe id="iframe-glpi" src="https://helpdesk.lestetelecom.com.br/" style="width: 100% !important; height: 95vh !important;" frameborder="0" allowfullscreen ></iframe>
+        </div>
+    </section>
+    <script >
+        function escrita() {
+            document.getElementById("login_name").value = "gabriel_reis"
+        };
+
+        setTimeout(function() {
+            escrita();
+        }, 10000);
+
+    </script>
+{% endblock %}

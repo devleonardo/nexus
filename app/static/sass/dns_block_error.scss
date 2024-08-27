@@ -1,0 +1,40 @@
+#card{
+    .dns_block_error {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: $bg-color;
+        .consulta{
+            margin: 10px 0 0 0;
+            color: $title-color;
+        }
+ 
+        span {
+            color: $secondary-leste;
+        }
+        .terminal_dns {
+            max-height: 550px;
+            background-color: $primary-color;
+            color: $secondary-leste;
+            font-size: 15px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            padding: 15px;
+            white-space: nowrap;
+            display: inline-block;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+                border-radius: 5px;
+            }
+        
+            &::-webkit-scrollbar-thumb {
+                height: 40px;
+                border-radius: 5px;
+                background-color: $secondary-leste; /* COR DA ALÇA */
+            }
+        }
+    }
+}

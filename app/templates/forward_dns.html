@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/static/css/output.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <title>NEXUS</title>
+    </head>
+    <body>
+<!-- ########################################################################################################################################## -->
+<!-- BARRA LATERAL DE INFORMAÇÕES DO USUARIO E MENU -->
+        <section id="navbar">
+            <nav class="container navbar">
+                <div class="logo">
+                    <img src="/static/img/nexus logo.png" alt="">
+                </div>
+                <div>
+                    <ul id="menu">
+                        <li><a href="/home"><i class="bi bi-house-fill"></i>HOME</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-globe2"></i>
+                                DNS
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/monitor" class="dropdown-item"><i class="bi bi-grid-3x3-gap-fill"></i>MONITORAMENTO</a></li>
+                                <li><a href="/dashboard" class="dropdown-item"><i class="bi bi-globe-americas"></i>TESTE DE DOMÍNIO</a></li>
+                                <li><a href="/dns_block" class="dropdown-item"><i class="bi bi-shield-slash-fill"></i></i>BLOQUEIO DNS</a></li>
+                                <li><a href="/forward_dns" class="dropdown-item"><i class="bi bi-shield-fill-check"></i></i>APONTAMENTO DNS</a></li>
+                                <li><a href="/dns_block_error" class="dropdown-item"><i class="bi bi-book"></i></i>HISTÓRICO</a></li>
+                                <li><a href="/permissao_dns" class="dropdown-item"><i class="bi bi-person-vcard-fill"></i></i>PERMISSÃO</a></li>
+                            </ul>
+                          </li>
+                        <li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-columns"></i>
+                                ZABBIX
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="/host_zabbix" class="dropdown-item"><i class="bi bi-window-plus"></i>CRIAR HOST</a></li>
+                                <li><a href="/permissao_zabbix" class="dropdown-item"><i class="bi bi-card-text"></i>PERMISSAO</a></li>
+                            </ul>
+                            </li>
+                        <li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-file-earmark-bar-graph"></i>
+                                LOGS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="/log_rdns" class="dropdown-item"><i class="bi bi-globe2"></i>RDNS</a></li>
+                                <li><a href="/log_ads" class="dropdown-item"><i class="bi bi-windows"></i>ADS</a></li>
+                                <li><a href="/log_storages" class="dropdown-item"><i class="bi bi-database-fill"></i>STORAGES</a></li>
+                            </ul>
+                            </li>
+                        <li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-clipboard-data-fill"></i>
+                                PAINEL TI
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/busca" class="dropdown-item"><i class="bi bi-search"></i>CONSULTA-AD</a></li>
+                                <li><a href="/adwall" class="dropdown-item"><i class="bi bi-file-earmark-image-fill"></i>AD Wallpaper</a></li>
+                                <li><a href="/gerador_senhas" class="dropdown-item"><i class="bi bi-file-lock2"></i>GERADOR DE SENHAS</a></li>
+                                <li><a href="/audit" class="dropdown-item"><i class="bi bi-journals"></i>LOG</a></li>
+                                <li><a href="/painel" class="dropdown-item"><i class="bi bi-menu-button-wide-fill"></i>CONTROLADORES</a></li>
+                                <li><a href="/versao" class="dropdown-item"><i class="bi bi-git"></i>NOTAS DE VERSÃO</a></li>
+                            </ul>
+                          </li>
+                        <li>
+                            <i class="bi bi-list navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation"></i>
+                        </li>
+                    </ul>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                                <i class="bi bi-person-fill"></i>
+                                Dados do usuário
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="exit">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="logout">
+                                    <i class="bi bi-x-square-fill"></i>
+                                    <a href="{{ url_for('logout') }}">
+                                        Encerrar sessão 
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="painel">
+                            <ul>
+                                <li>
+                                    <span>Usuário:</span>
+                                    <p>
+                                        {{ session['userName'] }}
+                                    </p>
+                                </li>
+                                <li>
+                                    <span>Nome:</span>
+                                    <p>
+                                        {{ session['displayName'] }}
+                                    </p>
+                                </li>
+                                <li>
+                                    <span>Função:</span>
+                                    <p>
+                                        {{ session['description'] }}
+                                    </p>
+                                </li>
+                                <li>
+                                    <span>Email:</span>
+                                    <p>
+                                        {{ session['mail'] }}
+                                    </p>
+                                </li>
+                                <li>
+                                    <span>Domínio:</span>
+                                    <p>
+                                        {{ session['domain'] }}
+                                    </p>
+                                </li>
+                                <li>
+                                    <span>Membro de:</span>
+                                    <p>
+                                        {% for group in session['groupps'] %}
+                                            <label class="grupo">{{ group }}</label>
+                                        {% endfor %}
+                                    </p>
+                                </li>
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        {% block content %}
+        <section id="bar">
+            <div class="container banner">
+                <div id="user">
+                    {% block subcontent %}
+                        <h2>Apontamento de <b class="name">domínios</b></h2>
+                        <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+        <section class="dns-block-b">
+            <div class="container-dns-block" id="ifr-dns-block">
+                <div class="terminal-dns-status" id="log-content"></div>
+                <iframe src="/apontamento_dns" class="iframe-bloqueio"></iframe>
+            </div>
+        </section>
+        <script src="../static/js/forward_dns.js"></script>
+        {% endblock %}
+        <script src="/static/js/main.js"></script>
+        <footer id="version">
+            <div class="version">
+                <ul>
+                    <li>NEXUS</li>
+                    <li>v. 2.6 beta</li>
+                    <li>Desenvolvido por:</li>
+                    <li>TI Leste | Ramal: 3700</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

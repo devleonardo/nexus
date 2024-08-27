@@ -1,0 +1,38 @@
+<meta http-equiv="refresh" content="20">
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="/static/css/animation.css">
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            <h2>MONITORAMENTO <b class="name">RDNS</b></h2>
+        </div>
+    </div>
+</section>
+<br><br>
+<section id="detector">
+    {% for dns_server_name, domain_results in results.items() %}
+    <div class="domain">
+        <label class="dominio">
+            <a href="/detector/{{ dns_server_name }}" target="_blank"><b>{{ dns_server_name }}</b></a>
+        </label>
+        <ul>
+            {% for domain_result in domain_results %}
+                <li>
+                    {% if domain_result['status'] == 'success' %}
+                        <div class="sucesso container">{{ domain_result['domain'] }}</div>
+                    
+                    {% elif domain_result.status == 'error' %}
+                        <div class="erro container">{{ domain_result['domain'] }}</div>
+                    
+                    {% elif domain_result['status'] == 'timeout' %}
+                        <div class="timeout container">{{ domain_result['domain'] }}</div>
+    
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
+</section>
+{% endblock %}

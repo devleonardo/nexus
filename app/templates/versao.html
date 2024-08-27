@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+<section>
+    <div class="notas container">
+        <table id="notas">
+            <tr class="titulo">
+                <th scope="col"><i class="bi bi-person"></i> Notas de versão - NEXUS:</th>
+            </tr>
+                <tr>
+                    <td>
+                        <p class="titulo-nota">Versão 2.8 Beta</p>
+                        <p>- Consultar URLs bloqueadas por ordem judicial.</p>
+                        <p class="titulo-nota">Versão 2.7 Beta</p>
+                        <p>- Reestruturação do menu de navegação.</p>
+                        <p>- Criação de grupos no AD.</p>
+                        <p>- Tratamento de erros com polimentos e automatizado.</p>
+                        <p>- Calculadora de máscara de rede</p>
+                        <p>- Busca por MAC do dispositivo</p>
+                        <p>- Atualização de código na edição de grupos.</p>
+                        <p>- Implementação da cópia de grupos com base em usuário de origem.</p>
+                        <p>- Atualização de integrações com Windows, saindo do Ansible e Utilizando WinRM e LDAP3</p>
+                        <p>- Refatoração conjunto de botões em "Detalhes de Usuário".</p>
+                        <p class="titulo-nota">Versão 2.6 Beta</p>
+                        <p>- Provisionamento de usuário no OTRS através da criação de usuários.</p>
+                        <p>- Bloqueio e desbloqueio de usuário no OTRS.</p>
+                        <p>- Alteração na estilização do Nexus.</p>
+                        <p class="titulo-nota">Versão 2.5 Beta</p>
+                        <p>- Editar grupos do usuário no AD através do Nexus.</p>
+                        <p>- Alterar wallpaper dos ADs e de todas estações em seu domínio.</p>
+                        <p>- Rotacionamento de logs dos ADs automatizado e com monitoramento.</p>
+                        <p>- Rotacionamento de logs do GIGASTORAGE01 automatizado e com monitoramento.</p>
+                        <p>- Correções e melhorias na criação de usuários e reset de senha.</p>
+                        <p class="titulo-nota">Versão 2.4 Beta</p>
+                        <p>- Criação de usuários no AD a partir de cópia de permissões.</p>
+                        <p>- Alteração de senha para usuários no AD, definindo se vai ser alterada no proximo logon ou fixa.</p>
+                        <p>- Rotação automática de logs nos RDNS, com paǵina de monitoramento de execução.</p>
+                        <p>- Alteração dos menus "MONITORAMENTO" e "TESTE DE DOMINIO", ambos alocados para o menu "DNS".</p>
+                        <p class="titulo-nota">Versão 2.3 Beta</p>
+                        <p>- Gerador de senhas.</p>
+                        <p>- Implementação do Menu ZABBIX.</p>
+                        <p>- Criação de hosts no Zabbix.</p>
+                        <p class="titulo-nota">Versão 2.2 Beta</p>
+                        <p>- Apontamento de domínios nos servidores RDNS.</p>
+                        <p>- Reset de senha 2.0.</p>
+                        <p>- Alterações nas configurações de integração com os servidores RDNS.</p>
+                        <p class="titulo-nota">Versão 2.1 Beta</p>
+                        <p>- Associação de agente IP.</p>
+                        <p>- Reset de senha na página do usuário.</p>
+                        <p>- Menu com funções para DNS.</p>
+                        <p>- Bloqueio de domínio nos servidores RDNS.</p>
+                        <p>- Log de ações realizadas nas funções de DNS.</p>
+                        <p>- Página excluiva para o gerente definir qual usuário pode acessas as funções DNS.</p>
+                        <p>- Otimização com redundância de dados compartilhados entre páginas.</p>
+                        <p class="titulo-nota">Versão 2.0 beta</p>
+                        <p>- Nova interface gráfica.</p>
+                        <p>- Monitoramento de DNS repaginado, com monitorando individual de servidores.</p>
+                        <p>- Monitoramento de LOG de usuários.</p>
+                        <p>- Monitoramento de LOG de acesso e ações no Nexus.</p>
+                        <p>- Load de carregamento adicionado.</p>
+                        <p>- Busca usuários e estações, alteração, bloqueio e desbloqueio de usuários.</p>
+                        <p>- Movimentação de estações entre OU's configurada com novos filtros e permissões ajustadas.</p>
+                        <p>- Remoção de estações do AD.</p>
+                        <p>- Otimozação geral do sistema, para rápido carregamento e consistências de dados.</p>
+                        <p class="titulo-nota">Avisos:</p>
+                        <p>
+                            - Ao se deparar com inconsistências nas informações apresentadas, por favor, informe ao setor de TI enviando
+                            a informção atualizada, para que sejam corrigidas imediatamente.
+                        </p>
+                        <p>
+                            - Por se tratar de uma versão beta, podem surgir erros ao acessar informações ou páginas. Pedimos também que
+                            relatem caso esbarrem com esse tipo de problema, para que sejam verificados e corrigidos.
+                        </p>
+                        <p>
+                            - As informações de monitoramento estão sucetíveis a mudanças sem aviso prévio.
+                        </p>
+                        <p>
+                            - Para solicitar a inclusão de informações(domínios) para monitoramento, contate o setor pelo ramais abaixo:
+                        </p>
+                        <ul id="ramal">
+                            <li>
+                                <span>Setor</span>
+                                <p>3700</p>
+                            </li>
+                            <li>
+                                <span>Development operations</span>
+                                <p>3701</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+        </table>
+    </div>
+</section>
+{% endblock %}

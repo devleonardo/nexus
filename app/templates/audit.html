@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+        <section id="bar">
+            <div class="container banner">
+                <div id="user">
+                    <h2>LOGS <b class="name">NEXUS</b></h2>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section id="card">
+            <div class="container audit_log" id="info">
+                <!-- LAÇO DE REPETIÇÃO QUE IRA PASSAR TODO O ARQUIVO LIDO E ARMAZENADO DO LOG_FILE -->
+                <ul class="log" id="log-list">
+                {% for log in log_file|reverse %}
+                    <li>
+                        {{ log }}
+                    </li>
+                {% endfor %}
+                </ul>
+                <input type="text" id="search-input" placeholder="Pesquisar..." required>
+                <button id="search-button" type="button" class="btn btn-success">Pesquisar</button>
+            </div>
+        </section>
+        <br><br>
+        
+{% endblock %}

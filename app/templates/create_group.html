@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="/static/css/animation.css">
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+            <h2>CRIAR <b class="name">GRUPO</b></h2>
+            <!-- RESTANTE DO CONTEÚDO DO PAINEL -->
+            {% endblock %}
+        </div>
+    </div>
+</section>
+<br> <br>
+<section id="conteudo">
+    <div id="loading" class="loading-container">
+    </div>
+    <div class="container" id="create-group">
+        <div class="linha-ponto">
+            <ol class="progress-list" style="--length: 3" role="list">
+                <li class="progress-item" style="--i: 1">
+                    <h3 class="progress-title">Unidade Organizacional</h3>
+                    <p class="progress-description">Selecione a unidade organizacional e busque a OU.</p>
+                </li>
+                <li class="progress-item" style="--i: 2">
+                    <h3 class="progress-title">Selecione o grupo (opcional)</h3>
+                    <p class="progress-description">Selecione o grupo dentre os disponíveis de acordo com a OU selecionada anteriormente ou deixe em Nenhum.</p>
+                </li>
+                <li class="progress-item" style="--i: 3">
+                    <h3 class="progress-title">Nome do grupo</h3>
+                    <p class="progress-description">Digite o nome do grupo que deseja criar no espaço indicado.</p>
+                </li>
+            </ol>
+        </div>
+        {% if not groups_list %}
+        <form id="groupForm-create" action="{{ url_for('create_group.search_group') }}" method="POST">
+            <div class="form-group-create">
+                <label class="label-create" for="options"><i class="bi bi-folder-fill"></i> Selecione a unidade
+                    organizacional:</label>
+                <div class="select-container">
+                    <select class="select-create" id="options-create" name="selected-ou">
+                        {% if not groups_list %}
+                        {% for ou in ou_list %}
+                        <option value="{{ou}}">{{ou}}</option>
+                        {% endfor %}
+                        {%endif%}
+                        {% if groups_list %}
+                        <option value="{{ou_list}}">{{ou_list}}</option>
+                        {%endif%}
+                    </select>
+                </div>
+                {% if not groups_list %}
+                <button class="btnSubmit" type="submit">Buscar OU</button>
+                {% endif %}
+            </div>
+        </form>
+        {% endif %}
+        <div id="modalCreateGp" class="modal">
+            <div class="modal-content">
+                <h2>ATENÇÃO</h2>
+                <p>Tem certeza que deseja criar este grupo?</p>
+                <div id="botaoModal">
+                    <button class="btn btn-success carregar" id="confirmBtnGp" type="submit"
+                        name="save_query">Confirmar</button>
+                    <button class="btn btn-danger" id="cancelBtnGp">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        {% if groups_list %}
+        <form id="groupForm-create" action="{{ url_for('create_group.create_group') }}" method="POST">
+            <div class="form-group-create">
+                <label class="label-create" for="options"><i class="bi bi-folder-fill"></i> Unidade organizacional selecionada:</label>
+                <select class="select-create" id="options-create" name="selected-ou">
+                    <option value="{{ou_list}}">{{ou_list}}</option>
+                </select>
+                <label class="label-create" for="options"><i class="bi bi-people-fill"></i> Selecione o grupo:</label>
+                <div class="select-container">
+                    <select class="select-create" id="options-create-grupo" name="selected-group">
+                        <option value="nenhum">Nenhum</option>
+                        {% for group in groups_list %}
+                        {% set group_formated = group.split(',')[0].split('=')[1] if ',' in group and '=' in group else grupi.split('=')[1] %}
+                        <option value="{{group}}">{{group_formated}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group-create" id="groupNameContainer">
+                <label class="label-create center-label" for="groupName"><i class="bi bi-bookmark-check-fill"></i> Nome do
+                    grupo:</label>
+                <input class="input-create" type="text" id="groupName" name="groupName" placeholder="Nome do grupo">
+                <button id="openModalGp" class="btnSubmit">Criar grupo</button>
+                <div id="modalCreateGp" class="modal">
+                    <div class="modal-content">
+                        <h2>ATENÇÃO</h2>
+                        <p>Tem certeza que deseja criar este grupo?</p>
+                        <div id="botaoModal">
+                            <button class="btn btn-success carregar" id="confirmBtnGp" type="submit"
+                                name="save_query">Confirmar</button>
+                            <button class="btn btn-danger" id="cancelBtnGp">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</section>
+<script src="/static/js/create_group.js"></script>
+
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="/static/css/animation.css">
+    <script src="../static/js/statusIX.js"></script>
+    <section id="bar">
+        <div class="container banner">
+            <div id="user">
+                <h2>PONTOS DE TROCA DE <b class="name">TRÁFEGO</b></h2>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="conteudo">
+        <div class="container">
+            <div class="content">
+                <div class="conjunto_info">
+                    <div class="informativo">
+                        <i class="bi bi-activity"></i> IX.br
+                    </div>
+                    <div class="ultima_exec">
+                       Última atualização: {{ dataConsulta }}
+                    </div>
+                </div>
+                <div class="card cardIX">
+                    <button class="btn btn-link collapsed tabelaIX" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="botaoRio">
+                    <div class="card-header containerIX">
+                        <ul class="cardTitle">
+                            <li class="baseIX">
+                                <i class="bi bi-dash-circle-dotted" id="collapseRio""></i>
+                                {{base_ix_Rio[0]}}
+                            </li>
+                            <li>
+                                {% if statusRio == 'ok' %}
+                                <i class="bi bi-check2-circle statusOk" ></i>
+                                {% else %}
+                                <i class="bi bi-x-circle statusError"></i>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                    </button>
+                    <div id="collapseOne" class="collapse tabelaIX show" aria-labelledby="headingOne">
+                      <div class="card-body tabelaIX">
+                        <ul class="lista" id="listaIX">
+                            <ul>
+                                <li> {{ base_ix_Rio[1] }} </li>
+                                <span class="rightIX">
+                                    <li> {{ base_ix_Rio[2] }} </li>
+                                    {% if base_ix_Rio[2] == 'Operacional' %}
+                                        <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                        <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                            <ul>
+                                <li> {{ base_ix_Rio[3] }} </li>
+                                <span class="rightIX">
+                                    <li> {{ base_ix_Rio[4] }} </li>
+                                    {% if base_ix_Rio[4] == 'Operacional' %}
+                                        <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                        <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                            <ul>
+                                <li> {{ base_ix_Rio[5] }} </li>
+                                <span class="rightIX">
+                                    <li> {{ base_ix_Rio[6] }} </li>
+                                    {% if base_ix_Rio[6] == 'Operacional' %}
+                                        <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                        <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                        </ul> 
+                      </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card cardIX">
+                    <button class="btn btn-link collapsed tabelaIX" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" id="botaoSP">
+                    <div class="card-header containerIX">
+                        <ul class="cardTitle">
+                            <li class="baseIX">
+                                <i class="bi bi-dash-circle-dotted" id="collapseSP"></i>
+                                {{base_ix_SaoPaulo[0]}}
+                            </li>
+                            <li>
+                                {% if statusSP == 'ok' %}
+                                <i class="bi bi-check2-circle statusOk"></i>
+                                {% else %}
+                                <i class="bi bi-x-circle statusError"></i>
+                                {% endif %}
+                            </li>
+                        </ul>
+                        </div>
+                    </button>
+                    <div id="collapseTwo" class="collapse tabelaIX show" aria-labelledby="headingOne">
+                    <div class="card-body tabelaIX">
+                        <ul class="lista" id="listaIX">
+                            <ul>
+                                <li> {{ base_ix_SaoPaulo[1] }} </li>
+                                <span class="rightIX">
+                                    <li> {{ base_ix_SaoPaulo[2] }} </li>
+                                    {% if base_ix_SaoPaulo[2] == 'Operacional' %}
+                                        <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                        <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                            <ul>
+                                <li> {{ base_ix_SaoPaulo[3] }} </li>
+                                <span class="rightIX">
+                                    <li> {{ base_ix_SaoPaulo[4] }} </li>
+                                    {% if base_ix_SaoPaulo[4] == 'Operacional' %}
+                                        <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                        <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                            <ul>
+                                <li> {{ base_ix_SaoPaulo[5] }} </li>
+                                <span class="rightIX">
+                                    <li> {{ base_ix_SaoPaulo[6] }} </li>
+                                    {% if base_ix_SaoPaulo[6] == 'Operacional' %}
+                                        <i class="bi bi-check2-circle statusOk" ></i>
+                                    {% else %}
+                                        <i class="bi bi-x-circle statusError"></i>
+                                    {% endif %}
+                                </span>
+                            </ul>
+                        </ul>    
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

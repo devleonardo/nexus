@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- ########################################################################################################################################## -->
+<!-- BARRA DE BEM VINDO E INPUT DE TESTES DE DNS -->
+        <section id="bar">
+            <div class="container banner">
+                <div id="user">
+                    {% block subcontent %}
+                        <h2>TESTE DE <b class="name">DOMÍNIO</b></h2>
+                        <!-- Rest of the dashboard content -->
+                    {% endblock %}
+                </div>
+                <div id="formulario">
+                    <form method="POST" class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputValue" id="meuInput" name="domain" placeholder="www.google.com.br" required>
+                        <label for="floatingInputValue">Insira aqui o domínio a ser consultado...</label>
+                        <input type="submit" class="carregar" value="Iniciar">/
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div id="aviso" class="alert alert-light container" role="alert">
+            <strong>Observações: </strong> Ao realizar a consulta, digitar ou colar o domínio a ser consultado sem os prefixos <b>http://</b> ou <b>https://</b> ou <b>caracteres especiais</b> ao final do domínio.
+        </div>
+        <!-- Script que faz a tela de carregamento aparecer e desaparecer-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var iniciarBotao = document.querySelector("input[type='submit']");
+                var carregaImg = document.getElementById("carrega-img");
+                var resultadosUl = document.querySelector(".container.row");
+                var resultadoPing = document.querySelector(".ping.container");
+
+                iniciarBotao.addEventListener("click", function() {
+                    carregaImg.style.display = "block";
+                    resultadosUl.style.display = "none";
+                    resultadoPing.style.display = "none";
+                });
+            });
+        </script>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <section id="bar">
+            <div class="container banner">
+                <div id="user">
+                    <h1><i class="bi bi-person-badge-fill"> </i> {{ username }}</h1>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section id="card">
+            <div class="container" id="info_pc">
+                <div class="alertCard">
+                    <div id="notice">
+                        <span class="notice">
+                            Ao ingressar uma estação no AD, certifique-se de manter a
+                            nomenclatura padrão de nomes que consiste em:
+                            <strong>LST[SETOR][NUMERO]</strong>.
+                        </span>
+                        <span class="notice">
+                            <br>
+                            Ex: <strong>LSTENG001</strong> que seria a estação 001 da Engenharia.
+                        </span>
+                    </div>
+                    <form action="{{ url_for('busca.show_user_details', username=username) }}" method="POST">
+                        <!-- Modal -->
+                        <div id="modalAdd" class="modal">
+                            <div class="modal-content">
+                                <h2>Movendo a estação {{ username }}</h2>
+                                <p>Tem certeza que deseja mover essa estação para:</p>
+                                <input type="text" style="border: none;" id="campoInput" class="ocultar" name="selected_ou" readonly>
+                                <div id="botaoModal">
+                                    <button class="btn btn-success" id="confirmBtnAdd" type="submit" name="add" value="true">Confirmar</button>
+                                    <button class="btn btn-danger" id="cancelBtnAdd">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Modal -->
+                        <div class="input-group">
+                            <select class="form-select ouSelect" id="listaSuspensa">
+                                {% for ou in ous %}
+                                <option name="selected_ou">{{ ou }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </form>
+                    <button class="btn btn-success" id="add" onclick="adicionarItem()">Mover estação de OU</button>
+                    <button class="btn btn-outline-dark" type="submit" style="border: none; font-weight: bold;" disabled>UO atual: {{ atual_ou_filtered }}</button>
+                </div>
+                <div class="alertCard2">
+                    <div id="atention">
+                        <form action="{{ url_for('busca.ad_remove_f', username=username) }}" method="POST">
+                            <!-- Modal -->
+                            <div id="modalRemove" class="modal">
+                                <div class="modal-content">
+                                    <h2>Removendo estação {{ username }} do AD</h2>
+                                    <p>Tem certeza que deseja essa estação do Active Directory?</p>
+                                    <div id="botaoModal">
+                                        <button class="btn btn-success" id="confirmBtnRemove" type="submit" name="remove" value="true">Confirmar</button>
+                                        <button class="btn btn-danger" id="cancelBtnRemove">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal -->
+                        </form>
+                        <div class="alertAd">⚠️ ATENÇÃO:</div>
+                        <br>
+                        <span class="atention">
+                            Antes de clicar em <strong>Remover estação do AD</strong>,
+                            certifique-se de que esta é a estação correta a ser removida.
+                        </span>
+                    </div>
+                    <button class="btn btn-warning md-1" id="remove">Remover estação do AD</button>
+                </div>
+            </div>
+        </section>
+        <script src="/static/js/remove.js"></script>
+{% endblock %}

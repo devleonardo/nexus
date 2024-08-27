@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- ########################################################################################################################################## -->
+<!-- BARRA DE BEM VINDO E INPUT DE TESTES DE DNS -->
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+            <h2>CONSULTAR <b class="name">SITES BLOQUEADOS</b></h2>
+            <!-- Rest of the dashboard content -->
+            {% endblock %}
+        </div>
+        <div class="div-formularioUrl">
+            <div id="formulario">
+                <!-- CHAMA A FUNÇÃO RESOLVE_URL QUANDO A URL É ENVIADO -->
+                <form method="POST" action="{{ url_for('busca_url.resolve_url') }}" class="form-floating" id="form_URL">
+                    <input type="text" class="form-control" id="floatingInputValue" id="meuInput" name="form_url"
+                        placeholder="" required>
+                    <label for="floatingInputValue">Insira aqui o site a ser consultado...</label>
+                    <input type="submit" id="buscarURL" class="carregar" value="Buscar" disabled>
+                </form>
+            </div>
+            <form method="POST" action="{{ url_for('busca_url.buscar_todos') }}">
+                <input type="submit" id="buscarURLs" class="carregar" value="Buscar todos">
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Aviso sobre como buscar um site -->
+<div id="aviso" class="alert alert-light container" role="alert">
+    <strong>Para buscar um site digite: </strong> o nome do site ou a sua url (google.com).
+    <br>
+    <strong>Observação:</strong> Ao digitar o primeiro nome do site serão listados todos os sites correspondentes.
+</div>
+<section id="busca-url">
+    <div class="listagem container">
+        {% if comando %}
+        <table id="searchResult">
+            <caption>Lista de sites correspondentes</caption>
+            <div class="th-url">
+                <div class="titulo"><i class="bi bi-link"></i> Sites bloqueados</div>
+                <div class="button-container">
+                    <!-- Botão para copiar URLs -->
+                    <button class="copiarURL" onclick="copiarSites()"><i class="bi bi-clipboard2-fill"></i>
+                        Copiar</button>
+                    <!-- Botão para criar planilha -->
+                    <form method="POST" action="{{ url_for('busca_url.criar_planilha') }}" target="_blank">
+                        <button class="copiarURL"><i class="bi bi-table"></i> Criar planilha</button>
+                    </form>
+                </div>
+            </div>
+            <!-- <tr class="titulo">
+                <th scope="col"><i class="bi bi-link"></i> Sites bloqueados</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr> -->
+            <!-- Loop para cada site encontrado -->
+            <tr class="buscados">
+                {% for site in comando %}
+                <td class="td-url">{{ site }}</td>
+                <!-- Verifica se o índice do loop é divisível por 4 -->
+                {% if loop.index is divisibleby 4 %}
+            </tr>
+            <tr class="buscados">
+                {% endif %}
+                {% endfor %}
+            </tr>
+        </table>
+
+        {% endif %}
+    </div>
+</section>
+
+<br><br>
+
+<script src="/static/js/busca_url.js"></script>
+{% endblock %}

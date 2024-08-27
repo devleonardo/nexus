@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% block content %}
+        <section id="bar">
+            <div class="container banner">
+                <div id="user">
+                    <h1 id="userName"><i class="bi bi-person-badge-fill"> </i> {{ username }}</h1>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section id="card">
+            <div class="container" id="info">
+                <form action="{{ url_for('busca.show_user_details', username=username) }}" method="POST">
+                    <div class="formulario formularioI">
+                        <div class="nome">
+                            <label>Nome:</label>
+                            <p><input id="user_nome" type="text" value="{{ user_gn }}" name="nome" class="form-control" disabled></p>
+                        </div>
+        
+                        <div class="sobrenome">
+                            <label>Sobrenome:</label>
+                            <p><input id="user_sobrenome" type="text" value="{{ user_sn }}" name="sn" class="form-control" disabled></p>
+                        </div>
+                        
+                        <div class="iniciais">
+                            <label>Iniciais:</label>
+                            <p><input id="user_iniciais" type="text" value="{{ user_init }}" name="init" class="form-control" disabled></p>
+                        </div>
+                        
+                        <div class="descricao">
+                            <label>Função:</label>
+                            <p><input id="user_funcao" type="text" value="{{ description }}" name="descricao" class="form-control" disabled></p>
+                        </div>
+                        
+                        <div class="userLogin">
+                            <label>Login:</label>
+                            <p><input id="user_login" type="text" value="{{ username }}" name="userLogin" class="form-control" disabled></p>
+                        </div>
+
+                        <div class="email">
+                            <label>Email:</label>
+                            <p><input id="user_email" type="text" value="{{ email }}" name="e_mail" class="form-control" disabled></p>
+                        </div>
+
+
+                        <div class="cpf">
+                            <label>CPF:</label>
+                            <p><input id="user_cpf" type="text" value="{{ cpf }}" name="cpf" class="form-control" disabled></p>
+                        </div>
+                        
+                        <div class="agent_ip">
+                            <label>Agente IP:</label>
+                            <p><input id="user_agente" type="text" value="{{ agente_ip }}" name="agente" class="form-control" disabled></p>
+                        </div>
+                            <div class="status">
+                                <label>Conta:</label>
+                                {% if is_account_enabled %}
+                                <p style="color:rgb(255, 255, 255); background-color: rgb(0, 189, 0);">Ativa</p>
+                                {% else %}
+                                <p style="color:rgb(255, 255, 255); background-color: rgb(189, 0, 0);">Desativada</p>
+                                {% endif %}
+                            </div>
+                    </div>
+                    <div class="organizaGrupos">
+                        <div class="conjuntoBtn" id="conjBtn">
+                            <label id="addPerm">Adicionar permissão:</label>
+                            <div id="GroupBtns">
+                                <input class="form-control" type="text" id="searchGrupo" onclick="exibirLabelGp()" onkeyup="searchInGrupo()" placeholder="Buscar grupos...">
+                                <div id="org-grupo" class="org-grupo">
+                                    <div id= "list-grupos" class="list-grupos">
+                                        <ul class="grupos-list">
+                                            {% for grupi in grupos_ad %}
+                                            {% set grupos_acd = grupi.split(',')[0].split('=')[1] if ',' in grupi and '=' in grupi else grupi.split('=')[1] %}
+                                            <li>
+                                                <input id="gps{{ loop.index }}" class="checkgp" type="checkbox" value="{{ grupi }}" name="grupos_para_adicionar"></input>
+                                                <label for="gps{{ loop.index }}" class="grupo-name">{{ grupos_acd }}</label>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formularioI" id="edita_grupos" style="width: 82.5%;">
+                            <div class="grupos">
+                                <label id="membroDe">Membro de:</label>
+                                <ul class="item-list">
+                                    {% for group in groups %}
+                                    {% set group_name = group.split(',')[0].split('=')[1] if ',' in group and '=' in group else group.split('=')[1] %}
+                                    <li><input type="checkbox" id="chequebox{{ loop.index }}" name="grupos_para_remover" class="chequebox{{ loop.index }}" value="{{ group }}"disabled><label for="chequebox{{ loop.index }}">{{ group_name }}</label></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <!-- Modal -->
+                            <div id="modalSave" class="modal">
+                                <div class="modal-content">
+                                    <h2>Alterando usuário <b class="name">{{ username }}</b></h2>
+                                    <p>Tem certeza que deseja realizar alterações neste usuário?</p>
+                                    <div id="botaoModal">
+                                        <button class="btn btn-success carregar" id="confirmBtnSave" type="submit" name="save_query">Confirmar</button>
+                                        <button class="btn btn-danger" id="cancelBtnSave">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fim Modal -->
+                        </div>
+                    </div>
+                </form>
+                <!-- EXIBIÇÃO DO LOG DO USUARIO -->
+                <div id="log">
+
+                    <nav>
+                        <div class=" nav nav-tabs" id="nav-tab" role="tablist">
+                          <button class="nav-link active" id="bad-pwd-time" data-bs-toggle="tab" data-bs-target="#badpwdtime" type="button" role="tab" aria-controls="badpwdtime" aria-selected="true">Erros de senha</button>
+                          <button class="nav-link" id="pwd-last-set" data-bs-toggle="tab" data-bs-target="#pwdlastset" type="button" role="tab" aria-controls="pwdlastset" aria-selected="false">Alterações de senha</button>
+                          <button class="nav-link" id="last-logon" data-bs-toggle="tab" data-bs-target="#lastlogon" type="button" role="tab" aria-controls="lastlogon" aria-selected="false">Ultimo logon</button>
+                          <button class="nav-link" id="user-created" data-bs-toggle="tab" data-bs-target="#usercreated" type="button" role="tab" aria-controls="usercreated" aria-selected="false">Data de criação</button>
+                          <button class="nav-link" id="user-changed" data-bs-toggle="tab" data-bs-target="#userchanged" type="button" role="tab" aria-controls="userchanged" aria-selected="false">Alterações do usuário</button>
+                          <button class="nav-link" id="user-expires" data-bs-toggle="tab" data-bs-target="#userexpires" type="button" role="tab" aria-controls="userexpires" aria-selected="false">Expiração do usuário</button>
+                        </div>
+                      </nav>
+                      
+                      <div class="tab-content" id="nav-tabContent">
+                        {% if errou_senha_f == nunca_f or errou_senha_f == nunca_h %}
+                        <div class="tab-pane fade show active" id="badpwdtime" role="tabpanel" aria-labelledby="bad-pwd-time" tabindex="0">O usuário <strong>nunca</strong> errou a senha.</div>
+                        {% else %}
+                        <div class="tab-pane fade show active" id="badpwdtime" role="tabpanel" aria-labelledby="bad-pwd-time" tabindex="0">Ultimo erro de senha em: {{errou_senha_f}} às {{errou_senha_h}}</div>
+                        {% endif %}
+                        {% if ultima_troca_sn_f == nunca_h %}
+                        <div class="tab-pane fade" id="pwdlastset" role="tabpanel" aria-labelledby="pwd-last-set" tabindex="0">Sem informações.</div>
+                        {% else %}
+                        <div class="tab-pane fade" id="pwdlastset" role="tabpanel" aria-labelledby="pwd-last-set" tabindex="0">Ultima alteração de senha em: {{ultima_troca_sn_f}} às {{ultima_troca_sn_h}}</div>
+                        {% endif %}
+                        {% if ultimo_logon_f == nunca_f or ultimo_logon_f == nunca_h %}
+                        <div class="tab-pane fade" id="lastlogon" role="tabpanel" aria-labelledby="last-logon" tabindex="0">O usuário <strong>nunca</strong> conectou.</div>
+                        {% else %}
+                        <div class="tab-pane fade" id="lastlogon" role="tabpanel" aria-labelledby="last-logon" tabindex="0">Ultimo logon em: {{ultimo_logon_f}} às {{ultimo_logon_h}}</div>
+                        {% endif %}
+                        {% if data_criacao_user_f == nunca_h %}
+                        <div class="tab-pane fade" id="usercreated" role="tabpanel" aria-labelledby="user-created" tabindex="0">Sem informações.</div>
+                        {% else %}
+                        <div class="tab-pane fade" id="usercreated" role="tabpanel" aria-labelledby="user-created" tabindex="0">Usuário criado em: {{data_criacao_user_f}} às {{data_criacao_user_h}}</div>
+                        {% endif %}
+                        {% if data_modificacao_user_f == nunca_h %}
+                        <div class="tab-pane fade" id="userchanged" role="tabpanel" aria-labelledby="user-changed" tabindex="0">Sem informações.</div>
+                        {% else %}
+                        <div class="tab-pane fade" id="userchanged" role="tabpanel" aria-labelledby="user-changed" tabindex="0">Ultima modificação realizada em: {{data_modificacao_user_f}} às {{data_modificacao_user_h}}</div>
+                        {%endif%}
+                        {% if data_expiracao_user_f == nunca_b or data_expiracao_user_f == nunca_h %}
+                        <div class="tab-pane fade" id="userexpires" role="tabpanel" aria-labelledby="user-expires" tabindex="0">A conta do usuário <strong>nunca</strong> expira.</div>
+                        {% else %}
+                        <div class="tab-pane fade" id="userexpires" role="tabpanel" aria-labelledby="user-expires" tabindex="0">A conta do usuário expira em: {{data_expiracao_user_f}} às {{data_expiracao_user_h}}</div>
+                        {% endif %}
+                      </div>
+                </div>
+                <!-- ################################################### -->
+                <form action="{{ url_for('busca.block_user_f', username=username) }}" method="POST">
+                    {% if is_account_enabled %}
+                    <!-- Modal -->
+                    <div id="modalBlock" class="modal">
+                        <div class="modal-content">
+                            <h2>Bloqueando {{ username }}</h2>
+                            <p>Tem certeza que deseja bloquear este usuário?</p>
+                            <div id="botaoModal">
+                                <button class="btn btn-success carregar" id="confirmBtnBlock" type="submit" name="block" value="true">Confirmar</button>
+                                <button class="btn btn-danger" id="cancelBtnBlock">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Modal -->
+                    <!-- ################################################### -->
+                    {% else %}
+                    <!-- Modal -->
+                    <div id="modalBlock" class="modal">
+                            <div class="modal-content">
+                                <h2>Desbloqueando usuário {{ username }}</h2>
+                                <p>Tem certeza que deseja desbloquear este usuário?</p>
+                                <div id="botaoModal">
+                                    <button class="btn btn-success carregar" id="confirmBtnBlock" type="submit" name="block" value="false">Confirmar</button>
+                                    <button class="btn btn-danger" id="cancelBtnBlock">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Modal -->
+                        {% endif %}
+                </form>
+
+                
+                <!-- ################################################### -->
+                <form action="{{ url_for('busca.reset_password_f', username=username) }}" method="POST">
+                    <!-- Modal para confirmar edição de senha -->
+                    <div id="modalReset" class="modal">
+                        <div class="modal-content">
+                            <h3 class="modal-desc">Alterando senha de <b class="name">{{ username }}</b></h3>
+                            <p>Tem certeza que deseja alterar a senha deste usuário?</p>
+                            <div id="botaoModal">
+                                <button class="btn btn-success carregar" id="confirmBtnReset" type="submit" name="reset" value="true">Confirmar</button>
+                                <button class="btn btn-danger" id="cancelBtnReset">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do modal -->
+                    <!-- Inicio do Modal de Editar senha-->
+                    <div id="modalEdit" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-contentEdit">
+                                <h3 class="modal-desc">Alterando senha de <b class="name">{{ username }}</b></h3>
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-auto">
+                                      <label for="inputPassword6" class="col-form-label">Nova senha</label>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="viewIcon">
+                                            <i class="bi bi-eye-fill viewPass" id="viewPass" onclick="togglePasswordVisibility()" ></i>
+                                            <input type="password" name="nova_senha" id="inputPassword" class="form-control" aria-describedby="passwordHelpInline" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <span id="passwordHelpInline" class="form-text"></span>
+                                    </div>
+                                  <div class="check-style">
+                                    <div class="individual-style">  
+                                        <input type="checkbox" id="altSenha" name="alt_senha" class="check-input" value="true">
+                                        <label for="altSenha" class="check-label">Alterar senha no próximo logon.</label>
+                                    </div>
+                                    <div class="individual-style">
+                                        <input type="checkbox" id="nAltSenha" name="nalt_senha" class="check-input" value="true">
+                                        <label for="nAltSenha" class="check-label">Usuário não pode alterar a senha.</label>
+                                    </div>
+                                    <div class="individual-style">
+                                        <input type="checkbox" id="fixSenha" name="fix_senha" class="check-input" value="true">
+                                        <label for="fixSenha" class="check-label">Senha nunca expira.</label>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div id="botaoModal">
+                                <button class="btn btn-success" id="confirmBtnEdit"name="Edit" value="true">Alterar</button>
+                                <button class="btn btn-danger" id="cancelBtnEdit">Cancelar</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Fim do modal -->
+                </form>    
+                <form  action="{{ url_for('busca.mostrar_funcoes_f', username=username) }}" id="formSearchOrigin" method="POST" data-form >
+                    <div id="modalBuscaOrigin" class="modal">
+                        <div class="modal-content">
+                            <h2>Copiando funções para <b class="name">{{ username }}</b></h2>
+                            <label for="usuarioOrigem" class="form-label">Usuário de origem</label>
+                            <input class="form-control" id="usuarioOrigem" name="usuarioOrigem" placeholder="login do AD apenas...">
+                            <div id="botaoModal">
+                                <button class="btn btn-success" id="confirmBuscaOrigin" type="submit" data-button><div class="spinner-border d-none" id="spinner" role="status"></div>Buscar</button>
+                                <button class="btn btn-danger" id="cancelBuscaOrigin">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>   
+                                
+                <form action="{{ url_for('busca.clonar_grupos_f', username=username) }}" method="POST" id="formGroupClone">
+                </form>
+                
+                <div id="carregamento" class="loader">
+                    <div class="loader-content">
+                      <img src="/static/img/loader.gif" id="gif" alt="Carregando...">
+                    </div>
+                </div>
+                  
+                <!-- ################################################### -->
+                {% if CCorTI == "ti" %}
+                <button class="btn btn-primary" id="editar">Editar</button>
+                {% endif %}
+                <button class="btn btn-secondary" id="editarSenha">Alterar senha</button>
+                {% if is_account_enabled %}
+                <button class="btn btn-warning" id="bloquear">Bloquear</button>
+                {% else %}
+                <button class="btn btn-secondary" id="bloquear">Desbloquear</button>
+                {% endif %}
+                <button class="btn btn-success" id="salvar">Salvar</button>
+                <button class="btn btn-danger" id="cancelar">Cancelar</button>
+                <button class="btn btn-secondary" id="showOriginGroups">Copiar grupos</button>
+            </div>
+        </section>
+        <script src="/static/js/copia_funcoes.js"></script>
+        {% endblock %}

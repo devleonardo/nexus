@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- ########################################################################################################################################## -->
+<!-- BARRA DE BEM VINDO E INPUT DE TESTES DE DNS -->
+        <section id="bar">
+            <div class="container banner">
+                <div id="user">
+                    {% block subcontent %}
+                        <h2>CONSULTAR <b class="name">MAC</b></h2>
+                        <!-- Rest of the dashboard content -->
+                    {% endblock %}
+                </div>
+                <div id="formulario">
+                    <!-- CHAMA A FUNÇÃO RESOLVE_MAC QUANDO O MAC É ENVIADO -->
+                    <form method="POST" action="{{ url_for('busca_mac.resolve_mac') }}" class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputValue" name="mac_addr" placeholder="" required>
+                        <label for="floatingInputValue">Insira aqui o MAC a ser consultado...</label>
+                        <input type="submit"  id="buscarMAC" class="carregar" value="Iniciar" disabled>/
+                    </form>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <!-- SÓ IMPRIME O ELEMENTO NA TELA SE UMA CONSULTA FOR REALIZADA -->
+        <section id="card">
+            <div class="container" id="mac">
+                <div class="mac">
+                    <p>Fabricante: </p>
+                    <p class="mac" id="mac_resultado">
+                        {% if manufacturer: %}
+                            {{ manufacturer }}
+                        {% endif %}
+                    </p>
+                </div>
+                <hr>
+                <p> <strong>O que é um endereço MAC?</strong></p>
+                <p>
+                    O endereço MAC (Media Access Control address) de um dispositivo é uma sequência única de números atribuída a um controlador de interface de rede. É um identificador que comunica na camada de ligação de dados de um segmento de rede específico. Para a maioria das tecnologias de rede IEEE 802, incluindo Ethernet e Wi-Fi, os endereços MAC funcionam como endereços de rede. Assim, os endereços MAC serão utilizados numa das subcamadas do protocolo de controlo de acesso ao meio
+                    Um nó de rede pode ter alguns controladores de interface de rede (NICs), e cada um deles terá o seu próprio endereço MAC exclusivo. Dispositivos de rede mais sofisticados, como routers e comutadores multicamadas, podem mesmo exigir vários endereços MAC permanentes
+                </p>
+                    <p> O fabricante de um controlador de interface de rede (NIC) atribui endereços MAC que são armazenados no seu hardware, como a memória só de leitura de uma placa ou outro firmware. Nesse caso, um endereço MAC codifica normalmente o número de identificação registado pelo fabricante e pode ser designado por endereço gravado (BIA). Também pode ser referido como EHA (Ethernet hardware address), endereço de hardware ou endereço físico, ao contrário de um endereço programado, em que o dispositivo anfitrião emite comandos para a placa de rede de modo a utilizar um endereço arbitrário
+                    </p>
+                
+                    <p> O endereço MAC IEEE 802 original é derivado do esquema de endereçamento Ethernet original da Xerox. Este espaço de endereço de 48 bits contém potencialmente 2^248 ou 281.474.976.710.656 endereços MAC possíveis.
+                    </p>
+                </p>
+            </div>
+        </section>
+        <script src="https://unpkg.com/imask"></script>
+        <script src="../static/js/buscarMac.js"></script>
+{% endblock %}

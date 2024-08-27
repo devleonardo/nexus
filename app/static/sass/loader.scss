@@ -1,0 +1,60 @@
+.loading-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+  }
+  
+  #carrega-img {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    height: 200px;
+    transform: translate(-50%, -50%);
+  }
+
+  #loading {
+   img {
+    height: 200px;
+   }
+  }
+  
+
+// MODAL DE CARREGAMENTO RESET DE SENHA
+.loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.loader-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  #gif {
+    width: 250px;
+  }
+}
+// FIM DO ESTILO DO MODAL DE CARREGAMENTO
+
+.telaCompleta {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 9999 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100% !important;
+  width: 100% !important;
+  top: 0% !important;
+}

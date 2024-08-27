@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section id="bar">
+        <div class="container banner">
+            <div id="user">
+                {% block subcontent %}
+                    <h2>MONITORAMENTO <b class="name">RDNS</b></h2>
+                    <!-- Rest of the dashboard content -->
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section id="conteudo">
+        
+    </section>
+    <div id="loading" class="loading-container">
+        <img src="/static/img/duck.gif" alt="Loading...">
+    </div>
+    
+    <script>
+        // Função para adicionar o iframe após 1 segundo
+        function addIframe() {
+            var iframe = document.createElement('iframe');
+            iframe.src = '/detector';
+            iframe.width = window.innerWidth + 'px';
+
+            var conteudoSection = document.getElementById('conteudo');
+            conteudoSection.appendChild(iframe);
+        }
+
+        setTimeout(function() {
+            var loadingDiv = document.getElementById('loading');
+            loadingDiv.style.display = 'none';
+        }, 10000);
+
+        // Aguarda 1 segundo e, em seguida, adiciona o iframe
+        setTimeout(addIframe, 1000);
+    </script>
+{% endblock %}

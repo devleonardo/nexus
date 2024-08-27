@@ -1,0 +1,128 @@
+#dadosAd{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    .dadosPainel{
+        background-color: $bg-card-color;
+        color: $title-color;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: right;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        i{
+            font-size: 30px;
+            color: $title-color;
+            margin-right: 5px;
+            margin-left: -285px;
+            position: absolute;
+        }
+        p{
+            color: $title-color;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+        h2{
+            font-size: 50px;
+        }
+    }
+    .userAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel1;
+        h2{
+            font-size: 50px;
+        }
+    }
+    .userActiveAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel2;
+        h2{
+            font-size: 50px;
+        }
+    }
+    .userBlockAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel3;
+
+        h2{
+            font-size: 50px;
+        }
+    }
+    .computerAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel4;
+
+        h2{
+            font-size: 50px;
+        }
+    }
+    .ouAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel1;
+        h2{
+            font-size: 50px;
+        }
+    }
+    .groupAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel2;
+        h2{
+            font-size: 50px;
+        }
+    }
+    .domainControllerAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel3;
+        h2{
+            font-size: 50px;
+        }
+    }
+    .expiringPassdAD{
+        grid-column: span 2; /* O ITEM OCUPARA DUAS COLUNAS */
+        grid-row: span 1; /* O TEIM OCUPARA 1 LINHA */
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        // background: $secondary-leste;
+        background: $painel4;
+        h2{
+            font-size: 50px;
+        }
+    }
+}

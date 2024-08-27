@@ -1,0 +1,162 @@
+.dns-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: min-content !important;
+    overflow-y: hidden;
+
+    .container {
+        display: flex;
+        box-sizing: border-box;
+        padding: 30px !important;
+        border-radius: 10px;
+        background-color: $title-color;
+        gap: 20px;
+        height: fit-content;
+
+        .bloqueio-dns {
+            display: flex;
+            padding: 10px;
+            width: 47rem;
+
+            .list-group {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: space-between;
+                width: 50%;
+                .list-group-item {
+                    border: solid 1px $cl-border;
+                    border-radius: 5px;
+
+                    .form-check-label {
+                        color: $bg-button-color;
+                    }
+    
+                    .form-check-input:checked {
+                        background-color: $secondary-leste;
+                        border-color: $secondary-leste;
+                        color: $secondary-leste;
+                        
+                    }
+    
+                    input[type="checkbox"]:focus {
+                        display: none;
+                    }
+    
+                    .form-check-input.me-1 {
+                        background-color: $bg-input-color;
+                    }
+    
+                    .form-check-input.me-1:checked {
+                        background-color: $secondary-leste;
+                    }
+                }
+
+                .select-all-checkbox {
+
+                    .form-check-input:checked {
+                        background-color: $secondary-leste;
+                        border-color: $secondary-leste;
+                        color: $secondary-leste; 
+                    }
+    
+                    input[type="checkbox"]:focus {
+                        display: none;
+                    }
+    
+                    .form-check-input.me-1 {
+                        background-color: $bg-input-color;
+                    }
+    
+                    .form-check-input.me-1:checked {
+                        background-color: $secondary-leste;
+                    }
+                }
+            }
+
+            .modal-dns {
+                .modal-content {
+                    margin-top: 4.5%;
+                }
+            }
+
+            .style-dns-input {
+                display: flex;
+                flex-direction: column;
+                font-weight: bold;
+                width: 50%;
+
+                textarea {
+                    height: 100px;
+                    display: block;
+                    resize: none;
+                }
+                
+                .form-control:focus {
+                    border-color: $secondary-leste;
+                    box-shadow: none;
+                }
+                #bloqueardns {
+                    width: 100%;
+                    height: 43px;
+                    margin-top: 2rem;
+                }
+            }
+        }  
+
+        @keyframes textAnimation {
+            0% , 50%{
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .dnsbcontainer-aviso {
+            width: 100%;
+            max-width: 488px;
+            box-sizing: border-box !important;
+            background-color: black;
+
+            .terminal-dns-status {
+                max-height: 360px;
+                max-width: 488px;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: black;
+                border-radius: 5px;
+                box-sizing: border-box;
+                color: $secondary-leste;
+                font-size: 12px;
+                overflow: auto;
+                overflow-x: scroll;
+                padding: 10px;
+                white-space: nowrap;
+                display: none;
+                scrollbar-width: thin;
+                scrollbar-color: $secondary-leste $bg-color;
+        
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    height: 40px;
+                    border-radius: 5px;
+                    background-color: $secondary-leste; /* COR DA ALÇA */
+                }
+            }
+            
+            .aguardando {
+                margin-top: 10px;
+                margin-left: 10px;
+                color: $secondary-leste;
+                font-size: 12px;
+                animation: textAnimation 1s ease infinite;
+            }
+        }
+    }
+}

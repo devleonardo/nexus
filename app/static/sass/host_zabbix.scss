@@ -1,0 +1,193 @@
+// Container principal da página
+.hostZabbix {
+    background-color: $title-color;
+    border-radius: 10px;
+    height: 600px;
+    width: 1200px !important;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    div {
+        margin: none;
+    }
+    
+    // Div que engloba todo o conteudo
+    .novo-host {
+        padding-top: 30px;
+        box-sizing: border-box;
+        display: flex;
+        gap: 50px;
+
+        // Div para organizar somente os inputs
+        .org-input{
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            
+            textarea {
+                height: 169px;
+                display: block;
+                resize: none;
+            }
+
+            .tipo-conexao {
+
+                .conexao-type{
+                    padding-bottom: 7px;
+                }
+
+                #conexao {
+                    width: 250px;
+                    height: 39px;
+                }
+
+            }
+
+            .mb-3 {
+                margin-bottom: 0 !important;
+            }
+            
+        }
+        
+        // Div para organizar e dividir por igual os templates e os grupos
+        .split-tg {
+
+            display: flex;
+            gap: 20px;
+
+            // Div que exibe todos os templates
+            .org-all {
+                max-width: 400px;
+
+                .templates-label {
+                    color: $tertiary-color;
+                    padding-bottom: 10px;
+                }
+                
+                .list-templates {
+                    max-height: 400px;
+                    height: 400px;
+                    width: 400px;
+                    background-color: $bg-input-color;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    color: $secondary-leste;
+                    font-size: 12px;
+                    overflow-x: hidden;
+                    padding: 10px;
+                    white-space: nowrap;
+                    scrollbar-width: thin;
+                    scrollbar-color: $secondary-leste $bg-color;
+                    border: solid 1px $cl-border;
+
+                    &::-webkit-scrollbar {
+                        width: 8px;
+                        height: 8px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        height: 40px;
+                        border-radius: 5px;
+                        background-color: $secondary-leste; /* COR DA ALÇA */
+                    }
+                    .templates-list {
+                        .template-name {
+                            color: $tertiary-color;
+                        }
+                    }
+                }
+
+                #searchInput {
+                    margin-top: 10px;
+                }
+            }
+
+            // Div que exibe todos os grupos de hosts
+            .org-allII {
+                max-width: 400px;
+
+                .templates-labelII {
+                    color: $tertiary-color;
+                    padding-bottom: 10px;
+                }
+                
+                .list-templatesII {
+                    max-height: 400px;
+                    height: 400px;
+                    width: 400px;
+                    background-color: $bg-input-color;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    color: $secondary-leste;
+                    font-size: 12px;
+                    overflow: auto;
+                    padding: 10px;
+                    white-space: nowrap;
+                    scrollbar-width: thin;
+                    scrollbar-color: $secondary-leste $bg-color;
+                    border: solid 1px $cl-border;
+
+                    &::-webkit-scrollbar {
+                        width: 8px;
+                        height: 8px;
+                    }
+                    
+                    &::-webkit-scrollbar-thumb {
+                        height: 40px;
+                        border-radius: 5px;
+                        background-color: $secondary-leste; /* COR DA ALÇA */
+                    }
+                    .templates-listII {
+                        .template-nameII {
+                            color: $tertiary-color;
+                        }
+                    }
+                }
+
+                #searchInputII {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    // Botão para criar o host, fora do formulario para acionar o modal
+    #criar_host {
+        height: 35px;
+        width: 100px;
+        margin-bottom: 15px;
+    }
+
+    // Modal que exibe a mensagem de erro, caso aconteça
+    .modalErro {
+        display: block;
+        position: absolute;
+        width: 400px;
+        margin-left: 400px;
+        padding: 20px;
+        z-index: 999;
+
+        .alert-heading {
+            margin-left: 50px;
+        }
+
+        .btn-close {
+            position: absolute;
+            margin-left: 85%;
+
+        }
+    }
+    // Overlay que trava a funcionalidade da tela quando a modal de erro é exibida
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor escura */
+        z-index: 998; /* Garante que fique sobre outros elementos */
+        display: block; /* Inicialmente oculto */
+    }
+}
+

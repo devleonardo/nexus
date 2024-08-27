@@ -1,0 +1,60 @@
+/* INICIO DOS RESULTADOS */
+ul {
+  list-style: none;
+  padding: 0;
+  li {
+    border: none;
+    
+    sucesso{
+      color: $tertiary-color;
+      font-weight: 700;
+    }
+    
+    falha{
+      color: $error-color;
+      font-weight: 700;
+    }
+    
+    timeout{
+      color: $warning-color;
+      font-weight: 700;
+    }
+    
+    errodns{
+      color: $error-color;
+      font-weight: 700;
+    }
+    
+    sem{
+      color: $primary-color;
+      font-weight: 700;
+    }
+    
+    ping{
+      color: $tertiary-color;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+.ping{
+  padding: 10px 0;
+  color: $title-color;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: $secondary-leste;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  vfinal{
+    font-size: 40px;
+    font-weight: bold;
+    color: $title-color;
+  }
+}
+
+/* FINAL DOS RESULTADOS */

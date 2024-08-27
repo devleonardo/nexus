@@ -1,0 +1,34 @@
+<meta http-equiv="refresh" content="10">
+{% extends 'base.html' %}
+{% block content %}
+<!-- Novo template para exibir os resultados individuais do servidor DNS -->
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+                <h2 class="nome">{{ dns_server_name }}<b class="name"> - {{ dns_server_ip }}</b></h2>
+                <!-- Restante do conteúdo do painel -->
+            {% endblock %}
+        </div>
+    </div>
+</section>
+<section id="detector">
+    <div class="containerdns container">
+        <div class="colunadns">
+            <ul class="lista-colunas">
+                {% for result in results %}
+                <li class="lista-img ">
+                    <div class="info-img">
+                        <img class='dns-{{result.status}}' id="result-img" role='alert' src="/static/img/{{result.domain}}.png" alt="{{result.domain}}">
+                        <div class="desc">{{result.domain}} <br> RT - {% if result.ping_time is defined %}{{ result.ping_time }} ms{% else %}N/A{% endif %}</div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="colunadns2">
+            {{ resultado | safe }}
+        </div>
+    </div>
+</section>
+{% endblock %}

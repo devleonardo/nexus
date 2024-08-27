@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="bar">
+    <div class="container banner">
+        <div id="user">
+            {% block subcontent %}
+            <h2>DESBLOQUEIO DE<b class="name"> DOMÍNIOS</b></h2>
+            {% endblock %}
+        </div>
+    </div>
+</section>
+<br><br>
+<section class="dns-desblock">
+    <div class="container">
+        <div class="container-left">
+            <label id="dominios-desblock">Domínios bloqueados:</label>
+            <div id="dominio-list" class="div-dominios">
+                {% for dominio in todos_dominios %}
+                <ul class="item-list">
+                    <li><a href="#" class="dominio-item" data-dominio="{{ dominio }}">{{ dominio }}</a></li>
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="dns-domain-style">
+                <input id="search-input" class="input-dominio" placeholder="Buscar domínio" required>
+            </div>
+            <p class="text-selected">Domínios selecionados:</p>
+            <div class="div-dominios">
+                <!-- Domínios selecionados aparecerão aqui -->
+            </div>
+            <div class="div-button">
+                <button class="botaoExecutar">Executar</button>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="modalBlockdns" class="modal modal-dns">
+            <div class="modal-content ">
+                <h2>AVISO</h2>
+                <p>Recomendamos que verifique novamente os dados preenchidos.<br>
+                    Só confirme se estiver seguro de suas ações.</p>
+                <div id="botaoModal">
+                    <button class="btn btn-success" type="submit" value="true">Confirmar</button>
+                    <button class="btn btn-danger">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../static/js/desblock_dns.js"></script>
+
+{% endblock %}
